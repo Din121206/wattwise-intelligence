@@ -22,24 +22,46 @@ from app.alerts import AlertGenerator
 from app.raw_models import RawIoTData
 from app.energy import EnergyCalculator
 from app.generation import GenerationAnalyzer
+from ml.anomaly_classifier import MLAnomalyClassifier
+from ml.forecaster import MLSolarForecaster
 
 
 class IntelligenceEngine:
 
     EXCESS_GENERATION_THRESHOLD = 1.20
+    ML_CONFIDENCE_THRESHOLD = 0.75
+
+    ML_CAUSE_MAP = {
+        "panel_soiling": "Panel shaded or dirty",
+        "partial_shading": "Panel shaded or dirty",
+        "inverter_inefficiency": "Inverter inefficiency",
+        "cloudy_weather": "Cloudy weather",
+        "high_energy_consumption": "High energy consumption",
+    }
+
+    def __init__(self):
+        self.ml_anomaly_classifier = MLAnomalyClassifier()
+        self.ml_forecaster = MLSolarForecaster()
 
     def analyze(
         self,
         dataframe,
         capacity,
-        baseline_dataframe=None
+        baseline_dataframe=None,
     ):
+        """
+        Analyze historical/dataframe-based solar intelligence.
+
+        This legacy dataframe path continues to use the existing
+        SolarForecaster implementation.
+        """
+
         forecaster = SolarForecaster(capacity)
 
         if baseline_dataframe is not None:
             result = forecaster.predict_from_baseline(
                 baseline_dataframe,
-                dataframe
+                dataframe,
             )
         else:
             result = forecaster.predict(dataframe)
@@ -53,9 +75,11 @@ class IntelligenceEngine:
         result = analyzer.compare(result)
 
         health = HealthCalculator()
+
         result["health_score"] = result["performance_loss"].apply(
             health.calculate
         )
+
         result["status"] = result["health_score"].apply(
             health.status
         )
@@ -69,22 +93,25 @@ class IntelligenceEngine:
         recommender = RecommendationEngine()
         result = recommender.generate(
             result,
-            baseline_dataframe=baseline_dataframe
+            baseline_dataframe=baseline_dataframe,
         )
 
         # Detect unexpectedly high generation.
         excess_generation = (
-            result["expected_generation"] > 0
-        ) & (
-            result["actual_generation"]
-            > result["expected_generation"]
-            * self.EXCESS_GENERATION_THRESHOLD
+            (result["expected_generation"] > 0)
+            & (
+                result["actual_generation"]
+                > result["expected_generation"]
+                * self.EXCESS_GENERATION_THRESHOLD
+            )
         )
 
         result.loc[excess_generation, "anomaly"] = True
+
         result.loc[excess_generation, "likely_cause"] = (
             "Unexpectedly high solar generation"
         )
+
         result.loc[excess_generation, "recommendation"] = (
             "Verify irradiance conditions, sensor readings, "
             "and solar system measurements."
@@ -92,12 +119,86 @@ class IntelligenceEngine:
 
         return result
 
+    def _apply_ml_anomaly_classification(
+        self,
+        result,
+        raw_data: RawIoTData,
+    ):
+        """
+        Use the trained ML model to classify the current operating scenario.
+
+        ML results are stored internally so the public 9-field API contract
+        remains unchanged.
+        """
+
+        prediction = self.ml_anomaly_classifier.predict(raw_data)
+
+        result["ml_scenario"] = prediction["scenario"]
+        result["ml_confidence"] = prediction["confidence"]
+
+        scenario = prediction["scenario"]
+        confidence = prediction["confidence"]
+
+        # Only use a confident ML diagnosis for the main intelligence result.
+        if (
+            confidence >= self.ML_CONFIDENCE_THRESHOLD
+            and scenario in self.ML_CAUSE_MAP
+        ):
+            result["anomaly"] = True
+            result["likely_cause"] = self.ML_CAUSE_MAP[scenario]
+
+            if scenario == "panel_soiling":
+                result["recommendation"] = (
+                    "Inspect and clean the solar panels to remove "
+                    "possible dirt or soiling."
+                )
+
+            elif scenario == "partial_shading":
+                result["recommendation"] = (
+                    "Inspect the panel area for shadows, obstructions, "
+                    "or nearby objects causing partial shading."
+                )
+
+            elif scenario == "inverter_inefficiency":
+                result["recommendation"] = (
+                    "Inspect inverter efficiency, temperature, wiring, "
+                    "and operating condition."
+                )
+
+            elif scenario == "cloudy_weather":
+                result["recommendation"] = (
+                    "Reduced solar generation is consistent with "
+                    "cloudy weather conditions."
+                )
+
+            elif scenario == "high_energy_consumption":
+                result["recommendation"] = (
+                    "Reduce unnecessary loads or shift high-energy "
+                    "loads to periods of higher solar generation."
+                )
+
+        return result
+
     def analyze_raw(
         self,
         raw_data: RawIoTData,
         capacity: float,
-        historical_dataframe=None
+        historical_dataframe=None,
     ):
+        """
+        Analyze a raw IoT telemetry payload.
+
+        The raw IoT production path uses:
+        - mathematical energy calculations
+        - physics-based expected generation
+        - ML next-hour solar forecasting
+        - ML operating-scenario classification
+        - performance analysis
+        - health scoring
+        - recommendations
+        - hardware safety detection
+        """
+
         if not isinstance(raw_data, RawIoTData):
             raise TypeError(
                 "raw_data must be a RawIoTData object."
@@ -108,47 +209,56 @@ class IntelligenceEngine:
 
         generation_analyzer = GenerationAnalyzer(capacity)
 
+        # Expected generation is the physics-based estimate for
+        # the current operating conditions.
         expected_generation = (
             generation_analyzer.expected_generation(raw_data)
         )
 
+        # Actual generation comes directly from the solar telemetry.
         actual_generation = energy["solar_generation"]
 
-        if (
-            historical_dataframe is not None
-            and not historical_dataframe.empty
-        ):
-            predicted_generation = (
-                generation_analyzer.next_hour_prediction(
-                    historical_dataframe,
-                    raw_data.timestamp
-                )
-            )
-        else:
-            predicted_generation = expected_generation
+        # ---------------------------------------------------------
+        # ML SOLAR FORECAST
+        # ---------------------------------------------------------
+        # The trained ML model predicts NEXT-HOUR solar generation
+        # from the current IoT operating conditions.
+        predicted_generation = self.ml_forecaster.predict(raw_data)
 
-        result = pd.DataFrame([{
-            "timestamp": raw_data.timestamp,
-            "solar_generation": actual_generation,
-            "energy_consumption": energy["energy_consumption"],
-            "grid_import": energy["grid_import"],
-            "grid_export": energy["grid_export"],
-            "battery_charge": energy["battery_charge"],
-            "battery_discharge": energy["battery_discharge"],
-            "weather": "unknown",
-            "system_efficiency": 100.0,
-            "predicted_generation": predicted_generation,
-            "expected_generation": expected_generation,
-            "actual_generation": actual_generation
-        }])
+        # Keep the ML prediction within the physical panel capacity.
+        predicted_generation = min(
+            max(predicted_generation, 0.0),
+            capacity,
+        )
+
+        result = pd.DataFrame(
+            [
+                {
+                    "timestamp": raw_data.timestamp,
+                    "solar_generation": actual_generation,
+                    "energy_consumption": energy["energy_consumption"],
+                    "grid_import": energy["grid_import"],
+                    "grid_export": energy["grid_export"],
+                    "battery_charge": energy["battery_charge"],
+                    "battery_discharge": energy["battery_discharge"],
+                    "weather": "unknown",
+                    "system_efficiency": 100.0,
+                    "predicted_generation": predicted_generation,
+                    "expected_generation": expected_generation,
+                    "actual_generation": actual_generation,
+                }
+            ]
+        )
 
         performance = PerformanceAnalyzer()
         result = performance.compare(result)
 
         health = HealthCalculator()
+
         result["health_score"] = result["performance_loss"].apply(
             health.calculate
         )
+
         result["status"] = result["health_score"].apply(
             health.status
         )
@@ -162,30 +272,43 @@ class IntelligenceEngine:
         recommender = RecommendationEngine()
         result = recommender.generate(result)
 
+        # ---------------------------------------------------------
+        # ML ANOMALY CLASSIFICATION
+        # ---------------------------------------------------------
+        result = self._apply_ml_anomaly_classification(
+            result,
+            raw_data,
+        )
+
         # Detect unexpectedly high generation.
         excess_generation = (
             expected_generation > 0
             and actual_generation
-            > expected_generation
-            * self.EXCESS_GENERATION_THRESHOLD
+            > expected_generation * self.EXCESS_GENERATION_THRESHOLD
         )
 
         if excess_generation:
             result["anomaly"] = True
+
             result["likely_cause"] = (
                 "Unexpectedly high solar generation"
             )
+
             result["recommendation"] = (
                 "Verify irradiance conditions, sensor readings, "
                 "and solar system measurements."
             )
+
+        # ---------------------------------------------------------
+        # HARDWARE SAFETY DETECTION
+        # ---------------------------------------------------------
 
         hardware_detector = HardwareAnomalyDetector()
 
         hardware_anomalies = hardware_detector.detect(
             raw_data,
             expected_generation=expected_generation,
-            actual_generation=actual_generation
+            actual_generation=actual_generation,
         )
 
         result["hardware_anomalies"] = [
@@ -218,9 +341,11 @@ class IntelligenceEngine:
                 selected_anomaly = critical_anomalies[0]
 
                 result["status"] = "critical"
+
                 result["likely_cause"] = (
                     selected_anomaly["likely_cause"]
                 )
+
                 result["recommendation"] = (
                     selected_anomaly["recommendation"]
                 )
@@ -229,9 +354,11 @@ class IntelligenceEngine:
                 selected_anomaly = warning_anomalies[0]
 
                 result["status"] = "warning"
+
                 result["likely_cause"] = (
                     selected_anomaly["likely_cause"]
                 )
+
                 result["recommendation"] = (
                     selected_anomaly["recommendation"]
                 )
@@ -274,7 +401,7 @@ class IntelligenceEngine:
             ),
             inverter_status=str(
                 row["inverter_status"]
-            )
+            ),
         )
 
         intelligence_output = IntelligenceResult(
@@ -306,24 +433,24 @@ class IntelligenceEngine:
             ),
             recommendation=str(
                 row["recommendation"]
-            )
+            ),
         )
 
         hardware_anomalies = row.get(
             "hardware_anomalies",
-            []
+            [],
         )
 
         if not isinstance(
             hardware_anomalies,
-            list
+            list,
         ):
             hardware_anomalies = []
 
         return FinalOutput(
             energy_readings=energy_readings,
             intelligence_output=intelligence_output,
-            hardware_anomalies=hardware_anomalies
+            hardware_anomalies=hardware_anomalies,
         )
 
     def api_output(self, dataframe):
@@ -363,49 +490,49 @@ class IntelligenceEngine:
             ),
             recommendation=str(
                 row["recommendation"]
-            )
+            ),
         )
 
     def generate_alerts(
         self,
         dataframe,
-        installation_id: str
+        installation_id: str,
     ):
         alert_generator = AlertGenerator()
 
         return alert_generator.generate(
             dataframe,
-            installation_id
+            installation_id,
         )
 
     def build_api_response(
         self,
         dataframe,
-        installation_id: str
+        installation_id: str,
     ):
         intelligence = self.api_output(dataframe)
 
         alerts = self.generate_alerts(
             dataframe,
-            installation_id
+            installation_id,
         )
 
         return {
             "intelligence": intelligence.model_dump(),
-            "alerts": alerts
+            "alerts": alerts,
         }
 
     def run_raw(
         self,
         raw_data: RawIoTData,
         capacity: float,
-        historical_dataframe=None
+        historical_dataframe=None,
     ) -> FinalOutput:
 
         result = self.analyze_raw(
             raw_data,
             capacity=capacity,
-            historical_dataframe=historical_dataframe
+            historical_dataframe=historical_dataframe,
         )
 
         return self.build_final_output(
@@ -417,15 +544,15 @@ class IntelligenceEngine:
         dataframe,
         capacity: float,
         installation_id: str,
-        baseline_dataframe=None
+        baseline_dataframe=None,
     ):
         result = self.analyze(
             dataframe,
             capacity=capacity,
-            baseline_dataframe=baseline_dataframe
+            baseline_dataframe=baseline_dataframe,
         )
 
         return self.build_api_response(
             result,
-            installation_id
+            installation_id,
         )

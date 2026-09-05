@@ -1,0 +1,4952 @@
+[
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.656,
+      "current": 0.015
+    },
+    "environment": {
+      "irradiance": 6.97,
+      "panel_temperature": 26.88,
+      "ambient_temperature": 27.33
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.557
+    },
+    "battery": {
+      "voltage": 12.556,
+      "current": -0.542,
+      "temperature": 30.18
+    },
+    "inverter": {
+      "voltage": 16.656,
+      "current": 0.015,
+      "temperature": 34.79,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003114
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.962,
+      "current": 0.196
+    },
+    "environment": {
+      "irradiance": 186.2,
+      "panel_temperature": 29.88,
+      "ambient_temperature": 27.69
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.288
+    },
+    "battery": {
+      "voltage": 13.461,
+      "current": -0.093,
+      "temperature": 30.04
+    },
+    "inverter": {
+      "voltage": 16.962,
+      "current": 0.196,
+      "temperature": 39.03,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006793
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.586,
+      "current": 0.392
+    },
+    "environment": {
+      "irradiance": 405.79,
+      "panel_temperature": 35.09,
+      "ambient_temperature": 29.69
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.237
+    },
+    "battery": {
+      "voltage": 12.574,
+      "current": 0.155,
+      "temperature": 33.62
+    },
+    "inverter": {
+      "voltage": 17.586,
+      "current": 0.392,
+      "temperature": 42.48,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009734
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.58,
+      "current": 0.555
+    },
+    "environment": {
+      "irradiance": 576.5,
+      "panel_temperature": 40.82,
+      "ambient_temperature": 31.23
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.532
+    },
+    "battery": {
+      "voltage": 13.513,
+      "current": 0.023,
+      "temperature": 33.46
+    },
+    "inverter": {
+      "voltage": 17.58,
+      "current": 0.555,
+      "temperature": 45.09,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.676,
+      "current": 0.669
+    },
+    "environment": {
+      "irradiance": 713.88,
+      "panel_temperature": 41.38,
+      "ambient_temperature": 31.09
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.24
+    },
+    "battery": {
+      "voltage": 12.9,
+      "current": 0.428,
+      "temperature": 32.19
+    },
+    "inverter": {
+      "voltage": 17.676,
+      "current": 0.669,
+      "temperature": 46.25,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01317
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.198,
+      "current": 0.737
+    },
+    "environment": {
+      "irradiance": 804.38,
+      "panel_temperature": 44.74,
+      "ambient_temperature": 31.81
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.268
+    },
+    "battery": {
+      "voltage": 13.712,
+      "current": 0.469,
+      "temperature": 32.28
+    },
+    "inverter": {
+      "voltage": 18.198,
+      "current": 0.737,
+      "temperature": 45.72,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014305
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.51,
+      "current": 0.811
+    },
+    "environment": {
+      "irradiance": 901.91,
+      "panel_temperature": 46.94,
+      "ambient_temperature": 33.05
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.292
+    },
+    "battery": {
+      "voltage": 12.458,
+      "current": 0.52,
+      "temperature": 31.61
+    },
+    "inverter": {
+      "voltage": 18.51,
+      "current": 0.811,
+      "temperature": 47.79,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014912
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.364,
+      "current": 0.787
+    },
+    "environment": {
+      "irradiance": 885.55,
+      "panel_temperature": 47.04,
+      "ambient_temperature": 34.13
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.566
+    },
+    "battery": {
+      "voltage": 13.226,
+      "current": 0.221,
+      "temperature": 31.48
+    },
+    "inverter": {
+      "voltage": 18.364,
+      "current": 0.787,
+      "temperature": 47.34,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014727
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.201,
+      "current": 0.782
+    },
+    "environment": {
+      "irradiance": 880.5,
+      "panel_temperature": 47.13,
+      "ambient_temperature": 33.13
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.599
+    },
+    "battery": {
+      "voltage": 13.317,
+      "current": 0.183,
+      "temperature": 30.28
+    },
+    "inverter": {
+      "voltage": 18.201,
+      "current": 0.782,
+      "temperature": 46.57,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013225
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T15:00:00+00:00",
+    "solar": {
+      "voltage": 17.821,
+      "current": 0.73
+    },
+    "environment": {
+      "irradiance": 791.35,
+      "panel_temperature": 45.1,
+      "ambient_temperature": 33.38
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 13.352,
+      "current": 0.132,
+      "temperature": 35.16
+    },
+    "inverter": {
+      "voltage": 17.821,
+      "current": 0.73,
+      "temperature": 48.75,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.011807
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T16:00:00+00:00",
+    "solar": {
+      "voltage": 17.719,
+      "current": 0.647
+    },
+    "environment": {
+      "irradiance": 679.22,
+      "panel_temperature": 42.72,
+      "ambient_temperature": 32.45
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.245
+    },
+    "battery": {
+      "voltage": 13.183,
+      "current": 0.402,
+      "temperature": 35.72
+    },
+    "inverter": {
+      "voltage": 17.719,
+      "current": 0.647,
+      "temperature": 45.0,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009639
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.907,
+      "current": 0.565
+    },
+    "environment": {
+      "irradiance": 579.93,
+      "panel_temperature": 39.18,
+      "ambient_temperature": 31.12
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.319
+    },
+    "battery": {
+      "voltage": 13.55,
+      "current": 0.245,
+      "temperature": 30.92
+    },
+    "inverter": {
+      "voltage": 17.907,
+      "current": 0.565,
+      "temperature": 44.13,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006494
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.008,
+      "current": 0.399
+    },
+    "environment": {
+      "irradiance": 403.62,
+      "panel_temperature": 37.12,
+      "ambient_temperature": 31.01
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.208
+    },
+    "battery": {
+      "voltage": 14.072,
+      "current": 0.192,
+      "temperature": 34.99
+    },
+    "inverter": {
+      "voltage": 17.008,
+      "current": 0.399,
+      "temperature": 42.57,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003509
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.633,
+      "current": 0.198
+    },
+    "environment": {
+      "irradiance": 190.64,
+      "panel_temperature": 34.0,
+      "ambient_temperature": 30.25
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.228
+    },
+    "battery": {
+      "voltage": 13.769,
+      "current": -0.029,
+      "temperature": 30.77
+    },
+    "inverter": {
+      "voltage": 16.633,
+      "current": 0.198,
+      "temperature": 38.92,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-01T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.723,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 27.68,
+      "ambient_temperature": 28.15
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.285
+    },
+    "battery": {
+      "voltage": 13.371,
+      "current": -0.285,
+      "temperature": 31.21
+    },
+    "inverter": {
+      "voltage": 16.723,
+      "current": 0.0,
+      "temperature": 35.92,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.511,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 28.33,
+      "ambient_temperature": 28.45
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.29
+    },
+    "battery": {
+      "voltage": 13.009,
+      "current": -0.29,
+      "temperature": 31.38
+    },
+    "inverter": {
+      "voltage": 16.511,
+      "current": 0.0,
+      "temperature": 35.35,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.004036
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T07:00:00+00:00",
+    "solar": {
+      "voltage": 17.127,
+      "current": 0.21
+    },
+    "environment": {
+      "irradiance": 191.84,
+      "panel_temperature": 31.84,
+      "ambient_temperature": 29.51
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.228
+    },
+    "battery": {
+      "voltage": 12.828,
+      "current": -0.018,
+      "temperature": 31.29
+    },
+    "inverter": {
+      "voltage": 17.127,
+      "current": 0.21,
+      "temperature": 38.55,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006559
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.437,
+      "current": 0.39
+    },
+    "environment": {
+      "irradiance": 382.96,
+      "panel_temperature": 36.07,
+      "ambient_temperature": 30.38
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.276
+    },
+    "battery": {
+      "voltage": 12.574,
+      "current": 0.114,
+      "temperature": 32.54
+    },
+    "inverter": {
+      "voltage": 17.437,
+      "current": 0.39,
+      "temperature": 40.47,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010154
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.409,
+      "current": 0.552
+    },
+    "environment": {
+      "irradiance": 575.08,
+      "panel_temperature": 41.23,
+      "ambient_temperature": 31.64
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.336
+    },
+    "battery": {
+      "voltage": 13.951,
+      "current": 0.216,
+      "temperature": 31.14
+    },
+    "inverter": {
+      "voltage": 17.409,
+      "current": 0.552,
+      "temperature": 42.62,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01229
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T10:00:00+00:00",
+    "solar": {
+      "voltage": 18.195,
+      "current": 0.663
+    },
+    "environment": {
+      "irradiance": 720.62,
+      "panel_temperature": 41.55,
+      "ambient_temperature": 31.24
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.545
+    },
+    "battery": {
+      "voltage": 13.391,
+      "current": 0.119,
+      "temperature": 36.0
+    },
+    "inverter": {
+      "voltage": 18.195,
+      "current": 0.663,
+      "temperature": 44.01,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013815
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.0,
+      "current": 0.774
+    },
+    "environment": {
+      "irradiance": 850.2,
+      "panel_temperature": 47.23,
+      "ambient_temperature": 33.78
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.285
+    },
+    "battery": {
+      "voltage": 13.122,
+      "current": 0.489,
+      "temperature": 32.27
+    },
+    "inverter": {
+      "voltage": 18.0,
+      "current": 0.774,
+      "temperature": 45.99,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015145
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.306,
+      "current": 0.847
+    },
+    "environment": {
+      "irradiance": 926.07,
+      "panel_temperature": 47.53,
+      "ambient_temperature": 33.73
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 13.4,
+      "current": 0.249,
+      "temperature": 30.93
+    },
+    "inverter": {
+      "voltage": 18.306,
+      "current": 0.847,
+      "temperature": 49.76,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014964
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.478,
+      "current": 0.795
+    },
+    "environment": {
+      "irradiance": 914.84,
+      "panel_temperature": 47.04,
+      "ambient_temperature": 33.24
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.434
+    },
+    "battery": {
+      "voltage": 13.305,
+      "current": 0.361,
+      "temperature": 30.94
+    },
+    "inverter": {
+      "voltage": 18.478,
+      "current": 0.795,
+      "temperature": 50.13,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015181
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.455,
+      "current": 0.816
+    },
+    "environment": {
+      "irradiance": 924.85,
+      "panel_temperature": 45.99,
+      "ambient_temperature": 31.93
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.248
+    },
+    "battery": {
+      "voltage": 14.003,
+      "current": 0.568,
+      "temperature": 33.57
+    },
+    "inverter": {
+      "voltage": 18.455,
+      "current": 0.816,
+      "temperature": 47.86,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013505
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.44,
+      "current": 0.741
+    },
+    "environment": {
+      "irradiance": 839.37,
+      "panel_temperature": 45.39,
+      "ambient_temperature": 32.76
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.486
+    },
+    "battery": {
+      "voltage": 12.83,
+      "current": 0.254,
+      "temperature": 34.03
+    },
+    "inverter": {
+      "voltage": 18.44,
+      "current": 0.741,
+      "temperature": 47.17,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.011985
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T16:00:00+00:00",
+    "solar": {
+      "voltage": 17.901,
+      "current": 0.687
+    },
+    "environment": {
+      "irradiance": 713.19,
+      "panel_temperature": 42.51,
+      "ambient_temperature": 32.66
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 12.532,
+      "current": 0.088,
+      "temperature": 31.59
+    },
+    "inverter": {
+      "voltage": 17.901,
+      "current": 0.687,
+      "temperature": 44.55,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009555
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.491,
+      "current": 0.59
+    },
+    "environment": {
+      "irradiance": 598.39,
+      "panel_temperature": 40.97,
+      "ambient_temperature": 32.26
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.481
+    },
+    "battery": {
+      "voltage": 13.501,
+      "current": 0.108,
+      "temperature": 33.92
+    },
+    "inverter": {
+      "voltage": 17.491,
+      "current": 0.59,
+      "temperature": 45.92,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007156
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.517,
+      "current": 0.356
+    },
+    "environment": {
+      "irradiance": 376.73,
+      "panel_temperature": 35.55,
+      "ambient_temperature": 29.57
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.246
+    },
+    "battery": {
+      "voltage": 12.593,
+      "current": 0.11,
+      "temperature": 31.63
+    },
+    "inverter": {
+      "voltage": 17.517,
+      "current": 0.356,
+      "temperature": 40.86,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003864
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.781,
+      "current": 0.22
+    },
+    "environment": {
+      "irradiance": 211.07,
+      "panel_temperature": 31.66,
+      "ambient_temperature": 28.22
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.562
+    },
+    "battery": {
+      "voltage": 13.923,
+      "current": -0.342,
+      "temperature": 32.54
+    },
+    "inverter": {
+      "voltage": 16.781,
+      "current": 0.22,
+      "temperature": 36.54,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.000193
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-02T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.582,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 27.05,
+      "ambient_temperature": 26.51
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.496
+    },
+    "battery": {
+      "voltage": 13.393,
+      "current": -0.496,
+      "temperature": 30.06
+    },
+    "inverter": {
+      "voltage": 16.582,
+      "current": 0.0,
+      "temperature": 34.71,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.701,
+      "current": 0.003
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 29.3,
+      "ambient_temperature": 29.21
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.259
+    },
+    "battery": {
+      "voltage": 12.629,
+      "current": -0.256,
+      "temperature": 35.39
+    },
+    "inverter": {
+      "voltage": 16.701,
+      "current": 0.003,
+      "temperature": 34.23,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.004023
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.802,
+      "current": 0.219
+    },
+    "environment": {
+      "irradiance": 226.2,
+      "panel_temperature": 33.12,
+      "ambient_temperature": 30.31
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.512
+    },
+    "battery": {
+      "voltage": 13.991,
+      "current": -0.293,
+      "temperature": 33.72
+    },
+    "inverter": {
+      "voltage": 16.802,
+      "current": 0.219,
+      "temperature": 38.02,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.00738
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.476,
+      "current": 0.401
+    },
+    "environment": {
+      "irradiance": 394.92,
+      "panel_temperature": 38.14,
+      "ambient_temperature": 31.26
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.21
+    },
+    "battery": {
+      "voltage": 13.726,
+      "current": 0.191,
+      "temperature": 35.58
+    },
+    "inverter": {
+      "voltage": 17.476,
+      "current": 0.401,
+      "temperature": 40.25,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010365
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.887,
+      "current": 0.557
+    },
+    "environment": {
+      "irradiance": 607.43,
+      "panel_temperature": 40.69,
+      "ambient_temperature": 32.05
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.549
+    },
+    "battery": {
+      "voltage": 13.945,
+      "current": 0.008,
+      "temperature": 34.9
+    },
+    "inverter": {
+      "voltage": 17.887,
+      "current": 0.557,
+      "temperature": 43.0,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012685
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.696,
+      "current": 0.686
+    },
+    "environment": {
+      "irradiance": 740.76,
+      "panel_temperature": 43.36,
+      "ambient_temperature": 32.8
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.331
+    },
+    "battery": {
+      "voltage": 13.956,
+      "current": 0.355,
+      "temperature": 31.67
+    },
+    "inverter": {
+      "voltage": 17.696,
+      "current": 0.686,
+      "temperature": 47.98,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013983
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.49,
+      "current": 0.751
+    },
+    "environment": {
+      "irradiance": 862.99,
+      "panel_temperature": 46.97,
+      "ambient_temperature": 33.95
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.588
+    },
+    "battery": {
+      "voltage": 12.721,
+      "current": 0.163,
+      "temperature": 31.59
+    },
+    "inverter": {
+      "voltage": 18.49,
+      "current": 0.751,
+      "temperature": 49.8,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015071
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.377,
+      "current": 0.811
+    },
+    "environment": {
+      "irradiance": 906.6,
+      "panel_temperature": 46.79,
+      "ambient_temperature": 33.56
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.354
+    },
+    "battery": {
+      "voltage": 13.438,
+      "current": 0.457,
+      "temperature": 34.25
+    },
+    "inverter": {
+      "voltage": 18.377,
+      "current": 0.811,
+      "temperature": 47.62,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01549
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.495,
+      "current": 0.826
+    },
+    "environment": {
+      "irradiance": 925.08,
+      "panel_temperature": 47.43,
+      "ambient_temperature": 33.12
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.346
+    },
+    "battery": {
+      "voltage": 12.526,
+      "current": 0.481,
+      "temperature": 31.98
+    },
+    "inverter": {
+      "voltage": 18.495,
+      "current": 0.826,
+      "temperature": 49.53,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015531
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.219,
+      "current": 0.823
+    },
+    "environment": {
+      "irradiance": 916.88,
+      "panel_temperature": 46.89,
+      "ambient_temperature": 33.53
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.361
+    },
+    "battery": {
+      "voltage": 12.932,
+      "current": 0.462,
+      "temperature": 32.52
+    },
+    "inverter": {
+      "voltage": 18.219,
+      "current": 0.823,
+      "temperature": 47.26,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014359
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.136,
+      "current": 0.796
+    },
+    "environment": {
+      "irradiance": 877.94,
+      "panel_temperature": 47.11,
+      "ambient_temperature": 33.71
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.2
+    },
+    "battery": {
+      "voltage": 12.916,
+      "current": 0.596,
+      "temperature": 33.48
+    },
+    "inverter": {
+      "voltage": 18.136,
+      "current": 0.796,
+      "temperature": 47.89,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012447
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T16:00:00+00:00",
+    "solar": {
+      "voltage": 17.985,
+      "current": 0.715
+    },
+    "environment": {
+      "irradiance": 750.48,
+      "panel_temperature": 42.42,
+      "ambient_temperature": 31.74
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.518
+    },
+    "battery": {
+      "voltage": 12.705,
+      "current": 0.196,
+      "temperature": 33.09
+    },
+    "inverter": {
+      "voltage": 17.985,
+      "current": 0.715,
+      "temperature": 44.6,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009967
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.802,
+      "current": 0.555
+    },
+    "environment": {
+      "irradiance": 598.96,
+      "panel_temperature": 41.56,
+      "ambient_temperature": 32.07
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.28
+    },
+    "battery": {
+      "voltage": 12.444,
+      "current": 0.275,
+      "temperature": 32.85
+    },
+    "inverter": {
+      "voltage": 17.802,
+      "current": 0.555,
+      "temperature": 42.96,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006889
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.176,
+      "current": 0.437
+    },
+    "environment": {
+      "irradiance": 429.68,
+      "panel_temperature": 36.62,
+      "ambient_temperature": 29.91
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.398
+    },
+    "battery": {
+      "voltage": 12.839,
+      "current": 0.039,
+      "temperature": 30.03
+    },
+    "inverter": {
+      "voltage": 17.176,
+      "current": 0.437,
+      "temperature": 42.07,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003314
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.753,
+      "current": 0.253
+    },
+    "environment": {
+      "irradiance": 223.94,
+      "panel_temperature": 31.14,
+      "ambient_temperature": 27.93
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.407
+    },
+    "battery": {
+      "voltage": 12.49,
+      "current": -0.154,
+      "temperature": 35.09
+    },
+    "inverter": {
+      "voltage": 16.753,
+      "current": 0.253,
+      "temperature": 37.36,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.00024
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-03T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.793,
+      "current": 0.004
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 29.24,
+      "ambient_temperature": 28.9
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.58
+    },
+    "battery": {
+      "voltage": 14.005,
+      "current": -0.576,
+      "temperature": 34.32
+    },
+    "inverter": {
+      "voltage": 16.793,
+      "current": 0.004,
+      "temperature": 35.45,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.647,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.24,
+      "panel_temperature": 28.94,
+      "ambient_temperature": 28.14
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.304
+    },
+    "battery": {
+      "voltage": 12.845,
+      "current": -0.304,
+      "temperature": 34.59
+    },
+    "inverter": {
+      "voltage": 16.647,
+      "current": 0.0,
+      "temperature": 35.55,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.004091
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.807,
+      "current": 0.219
+    },
+    "environment": {
+      "irradiance": 218.02,
+      "panel_temperature": 30.86,
+      "ambient_temperature": 28.44
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.328
+    },
+    "battery": {
+      "voltage": 13.372,
+      "current": -0.109,
+      "temperature": 31.39
+    },
+    "inverter": {
+      "voltage": 16.807,
+      "current": 0.219,
+      "temperature": 36.82,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007423
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.391,
+      "current": 0.426
+    },
+    "environment": {
+      "irradiance": 432.73,
+      "panel_temperature": 35.17,
+      "ambient_temperature": 28.86
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.283
+    },
+    "battery": {
+      "voltage": 13.156,
+      "current": 0.144,
+      "temperature": 33.5
+    },
+    "inverter": {
+      "voltage": 17.391,
+      "current": 0.426,
+      "temperature": 43.11,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010543
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.439,
+      "current": 0.591
+    },
+    "environment": {
+      "irradiance": 617.68,
+      "panel_temperature": 40.94,
+      "ambient_temperature": 31.91
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.501
+    },
+    "battery": {
+      "voltage": 13.936,
+      "current": 0.09,
+      "temperature": 32.51
+    },
+    "inverter": {
+      "voltage": 17.439,
+      "current": 0.591,
+      "temperature": 46.08,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012997
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.881,
+      "current": 0.72
+    },
+    "environment": {
+      "irradiance": 774.66,
+      "panel_temperature": 43.28,
+      "ambient_temperature": 32.22
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.212
+    },
+    "battery": {
+      "voltage": 13.005,
+      "current": 0.509,
+      "temperature": 32.43
+    },
+    "inverter": {
+      "voltage": 17.881,
+      "current": 0.72,
+      "temperature": 47.34,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014558
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T11:00:00+00:00",
+    "solar": {
+      "voltage": 17.94,
+      "current": 0.793
+    },
+    "environment": {
+      "irradiance": 861.7,
+      "panel_temperature": 44.56,
+      "ambient_temperature": 31.39
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.426
+    },
+    "battery": {
+      "voltage": 12.449,
+      "current": 0.367,
+      "temperature": 30.81
+    },
+    "inverter": {
+      "voltage": 17.94,
+      "current": 0.793,
+      "temperature": 48.5,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015672
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.293,
+      "current": 0.865
+    },
+    "environment": {
+      "irradiance": 948.64,
+      "panel_temperature": 46.16,
+      "ambient_temperature": 32.51
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.352
+    },
+    "battery": {
+      "voltage": 13.754,
+      "current": 0.513,
+      "temperature": 31.51
+    },
+    "inverter": {
+      "voltage": 18.293,
+      "current": 0.865,
+      "temperature": 50.56,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01565
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.318,
+      "current": 0.856
+    },
+    "environment": {
+      "irradiance": 954.1,
+      "panel_temperature": 48.43,
+      "ambient_temperature": 33.12
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.512
+    },
+    "battery": {
+      "voltage": 13.573,
+      "current": 0.343,
+      "temperature": 35.7
+    },
+    "inverter": {
+      "voltage": 18.318,
+      "current": 0.856,
+      "temperature": 50.33,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015209
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.473,
+      "current": 0.841
+    },
+    "environment": {
+      "irradiance": 935.52,
+      "panel_temperature": 45.12,
+      "ambient_temperature": 31.83
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.287
+    },
+    "battery": {
+      "voltage": 13.659,
+      "current": 0.554,
+      "temperature": 31.01
+    },
+    "inverter": {
+      "voltage": 18.473,
+      "current": 0.841,
+      "temperature": 50.1,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014172
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.546,
+      "current": 0.773
+    },
+    "environment": {
+      "irradiance": 883.81,
+      "panel_temperature": 45.24,
+      "ambient_temperature": 31.35
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.21
+    },
+    "battery": {
+      "voltage": 12.962,
+      "current": 0.562,
+      "temperature": 35.75
+    },
+    "inverter": {
+      "voltage": 18.546,
+      "current": 0.773,
+      "temperature": 48.97,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012942
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.091,
+      "current": 0.685
+    },
+    "environment": {
+      "irradiance": 757.12,
+      "panel_temperature": 42.38,
+      "ambient_temperature": 30.64
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.509
+    },
+    "battery": {
+      "voltage": 13.931,
+      "current": 0.176,
+      "temperature": 30.73
+    },
+    "inverter": {
+      "voltage": 18.091,
+      "current": 0.685,
+      "temperature": 46.76,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010471
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.687,
+      "current": 0.605
+    },
+    "environment": {
+      "irradiance": 632.09,
+      "panel_temperature": 40.0,
+      "ambient_temperature": 30.66
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.336
+    },
+    "battery": {
+      "voltage": 13.929,
+      "current": 0.268,
+      "temperature": 30.63
+    },
+    "inverter": {
+      "voltage": 17.687,
+      "current": 0.605,
+      "temperature": 45.77,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007485
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.353,
+      "current": 0.448
+    },
+    "environment": {
+      "irradiance": 446.08,
+      "panel_temperature": 38.26,
+      "ambient_temperature": 31.16
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.586
+    },
+    "battery": {
+      "voltage": 12.886,
+      "current": -0.139,
+      "temperature": 33.23
+    },
+    "inverter": {
+      "voltage": 17.353,
+      "current": 0.448,
+      "temperature": 42.92,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003874
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T19:00:00+00:00",
+    "solar": {
+      "voltage": 17.143,
+      "current": 0.233
+    },
+    "environment": {
+      "irradiance": 216.13,
+      "panel_temperature": 32.58,
+      "ambient_temperature": 29.81
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.235
+    },
+    "battery": {
+      "voltage": 13.987,
+      "current": -0.001,
+      "temperature": 32.79
+    },
+    "inverter": {
+      "voltage": 17.143,
+      "current": 0.233,
+      "temperature": 37.22,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-04T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.722,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 5.52,
+      "panel_temperature": 26.78,
+      "ambient_temperature": 27.64
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.285
+    },
+    "battery": {
+      "voltage": 13.836,
+      "current": -0.285,
+      "temperature": 35.28
+    },
+    "inverter": {
+      "voltage": 16.722,
+      "current": 0.0,
+      "temperature": 34.44,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.271,
+      "current": 0.02
+    },
+    "environment": {
+      "irradiance": 10.06,
+      "panel_temperature": 27.58,
+      "ambient_temperature": 26.53
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.395
+    },
+    "battery": {
+      "voltage": 13.765,
+      "current": -0.376,
+      "temperature": 33.88
+    },
+    "inverter": {
+      "voltage": 16.271,
+      "current": 0.02,
+      "temperature": 35.91,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003732
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T07:00:00+00:00",
+    "solar": {
+      "voltage": 17.059,
+      "current": 0.221
+    },
+    "environment": {
+      "irradiance": 222.06,
+      "panel_temperature": 30.67,
+      "ambient_temperature": 27.89
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.433
+    },
+    "battery": {
+      "voltage": 13.252,
+      "current": -0.211,
+      "temperature": 32.55
+    },
+    "inverter": {
+      "voltage": 17.059,
+      "current": 0.221,
+      "temperature": 38.45,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007763
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.243,
+      "current": 0.428
+    },
+    "environment": {
+      "irradiance": 446.18,
+      "panel_temperature": 37.01,
+      "ambient_temperature": 30.78
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.277
+    },
+    "battery": {
+      "voltage": 12.615,
+      "current": 0.151,
+      "temperature": 34.57
+    },
+    "inverter": {
+      "voltage": 17.243,
+      "current": 0.428,
+      "temperature": 41.84,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010406
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T09:00:00+00:00",
+    "solar": {
+      "voltage": 18.001,
+      "current": 0.571
+    },
+    "environment": {
+      "irradiance": 607.75,
+      "panel_temperature": 40.64,
+      "ambient_temperature": 31.07
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.313
+    },
+    "battery": {
+      "voltage": 12.581,
+      "current": 0.257,
+      "temperature": 31.36
+    },
+    "inverter": {
+      "voltage": 18.001,
+      "current": 0.571,
+      "temperature": 42.89,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012846
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T10:00:00+00:00",
+    "solar": {
+      "voltage": 18.316,
+      "current": 0.7
+    },
+    "environment": {
+      "irradiance": 765.8,
+      "panel_temperature": 43.05,
+      "ambient_temperature": 32.01
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.479
+    },
+    "battery": {
+      "voltage": 12.627,
+      "current": 0.221,
+      "temperature": 32.95
+    },
+    "inverter": {
+      "voltage": 18.316,
+      "current": 0.7,
+      "temperature": 47.96,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014508
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.15,
+      "current": 0.817
+    },
+    "environment": {
+      "irradiance": 919.6,
+      "panel_temperature": 46.09,
+      "ambient_temperature": 32.41
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.576
+    },
+    "battery": {
+      "voltage": 13.26,
+      "current": 0.241,
+      "temperature": 32.4
+    },
+    "inverter": {
+      "voltage": 18.15,
+      "current": 0.817,
+      "temperature": 50.08,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.016059
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.445,
+      "current": 0.848
+    },
+    "environment": {
+      "irradiance": 953.63,
+      "panel_temperature": 45.14,
+      "ambient_temperature": 31.54
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 12.613,
+      "current": 0.25,
+      "temperature": 33.64
+    },
+    "inverter": {
+      "voltage": 18.445,
+      "current": 0.848,
+      "temperature": 50.36,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.016449
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.466,
+      "current": 0.9
+    },
+    "environment": {
+      "irradiance": 1000.0,
+      "panel_temperature": 47.97,
+      "ambient_temperature": 33.07
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.596
+    },
+    "battery": {
+      "voltage": 12.95,
+      "current": 0.304,
+      "temperature": 33.66
+    },
+    "inverter": {
+      "voltage": 18.466,
+      "current": 0.9,
+      "temperature": 50.48,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015746
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.57,
+      "current": 0.862
+    },
+    "environment": {
+      "irradiance": 986.93,
+      "panel_temperature": 46.22,
+      "ambient_temperature": 32.0
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.27
+    },
+    "battery": {
+      "voltage": 12.535,
+      "current": 0.592,
+      "temperature": 32.7
+    },
+    "inverter": {
+      "voltage": 18.57,
+      "current": 0.862,
+      "temperature": 47.81,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015234
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.433,
+      "current": 0.809
+    },
+    "environment": {
+      "irradiance": 905.66,
+      "panel_temperature": 45.7,
+      "ambient_temperature": 31.7
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.475
+    },
+    "battery": {
+      "voltage": 14.063,
+      "current": 0.334,
+      "temperature": 33.75
+    },
+    "inverter": {
+      "voltage": 18.433,
+      "current": 0.809,
+      "temperature": 49.74,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01287
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.168,
+      "current": 0.741
+    },
+    "environment": {
+      "irradiance": 789.89,
+      "panel_temperature": 43.62,
+      "ambient_temperature": 31.68
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.531
+    },
+    "battery": {
+      "voltage": 12.529,
+      "current": 0.21,
+      "temperature": 31.85
+    },
+    "inverter": {
+      "voltage": 18.168,
+      "current": 0.741,
+      "temperature": 45.51,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010853
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.885,
+      "current": 0.611
+    },
+    "environment": {
+      "irradiance": 635.94,
+      "panel_temperature": 39.27,
+      "ambient_temperature": 30.48
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.577
+    },
+    "battery": {
+      "voltage": 13.301,
+      "current": 0.034,
+      "temperature": 30.48
+    },
+    "inverter": {
+      "voltage": 17.885,
+      "current": 0.611,
+      "temperature": 44.51,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007493
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.077,
+      "current": 0.434
+    },
+    "environment": {
+      "irradiance": 410.88,
+      "panel_temperature": 35.3,
+      "ambient_temperature": 29.64
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.534
+    },
+    "battery": {
+      "voltage": 13.435,
+      "current": -0.101,
+      "temperature": 36.0
+    },
+    "inverter": {
+      "voltage": 17.077,
+      "current": 0.434,
+      "temperature": 42.97,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003819
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.945,
+      "current": 0.245
+    },
+    "environment": {
+      "irradiance": 231.14,
+      "panel_temperature": 31.71,
+      "ambient_temperature": 27.73
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.566
+    },
+    "battery": {
+      "voltage": 12.727,
+      "current": -0.321,
+      "temperature": 33.81
+    },
+    "inverter": {
+      "voltage": 16.945,
+      "current": 0.245,
+      "temperature": 38.81,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-05T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.4,
+      "current": 0.007
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 26.47,
+      "ambient_temperature": 26.77
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.543
+    },
+    "battery": {
+      "voltage": 12.994,
+      "current": -0.536,
+      "temperature": 31.73
+    },
+    "inverter": {
+      "voltage": 16.4,
+      "current": 0.007,
+      "temperature": 35.77,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.433,
+      "current": 0.017
+    },
+    "environment": {
+      "irradiance": 22.26,
+      "panel_temperature": 28.39,
+      "ambient_temperature": 28.15
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.588
+    },
+    "battery": {
+      "voltage": 13.128,
+      "current": -0.571,
+      "temperature": 35.93
+    },
+    "inverter": {
+      "voltage": 16.433,
+      "current": 0.017,
+      "temperature": 35.39,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003788
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.833,
+      "current": 0.227
+    },
+    "environment": {
+      "irradiance": 208.15,
+      "panel_temperature": 31.35,
+      "ambient_temperature": 28.85
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.45
+    },
+    "battery": {
+      "voltage": 13.768,
+      "current": -0.223,
+      "temperature": 33.3
+    },
+    "inverter": {
+      "voltage": 16.833,
+      "current": 0.227,
+      "temperature": 36.94,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006792
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.608,
+      "current": 0.407
+    },
+    "environment": {
+      "irradiance": 411.88,
+      "panel_temperature": 36.19,
+      "ambient_temperature": 30.76
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.296
+    },
+    "battery": {
+      "voltage": 12.685,
+      "current": 0.111,
+      "temperature": 33.31
+    },
+    "inverter": {
+      "voltage": 17.608,
+      "current": 0.407,
+      "temperature": 41.38,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009477
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.352,
+      "current": 0.54
+    },
+    "environment": {
+      "irradiance": 540.8,
+      "panel_temperature": 40.39,
+      "ambient_temperature": 32.36
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.399
+    },
+    "battery": {
+      "voltage": 13.69,
+      "current": 0.14,
+      "temperature": 31.64
+    },
+    "inverter": {
+      "voltage": 17.352,
+      "current": 0.54,
+      "temperature": 43.15,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01215
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.871,
+      "current": 0.693
+    },
+    "environment": {
+      "irradiance": 720.38,
+      "panel_temperature": 42.05,
+      "ambient_temperature": 31.14
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.403
+    },
+    "battery": {
+      "voltage": 13.983,
+      "current": 0.29,
+      "temperature": 31.66
+    },
+    "inverter": {
+      "voltage": 17.871,
+      "current": 0.693,
+      "temperature": 47.26,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013906
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.343,
+      "current": 0.733
+    },
+    "environment": {
+      "irradiance": 825.37,
+      "panel_temperature": 46.2,
+      "ambient_temperature": 33.81
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.319
+    },
+    "battery": {
+      "voltage": 13.456,
+      "current": 0.413,
+      "temperature": 32.94
+    },
+    "inverter": {
+      "voltage": 18.343,
+      "current": 0.733,
+      "temperature": 49.38,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01434
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.246,
+      "current": 0.777
+    },
+    "environment": {
+      "irradiance": 859.86,
+      "panel_temperature": 45.41,
+      "ambient_temperature": 32.41
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.329
+    },
+    "battery": {
+      "voltage": 12.74,
+      "current": 0.449,
+      "temperature": 33.43
+    },
+    "inverter": {
+      "voltage": 18.246,
+      "current": 0.777,
+      "temperature": 48.69,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014875
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.396,
+      "current": 0.809
+    },
+    "environment": {
+      "irradiance": 886.68,
+      "panel_temperature": 45.42,
+      "ambient_temperature": 31.63
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.354
+    },
+    "battery": {
+      "voltage": 13.595,
+      "current": 0.455,
+      "temperature": 35.88
+    },
+    "inverter": {
+      "voltage": 18.396,
+      "current": 0.809,
+      "temperature": 49.58,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014759
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.476,
+      "current": 0.797
+    },
+    "environment": {
+      "irradiance": 877.2,
+      "panel_temperature": 46.22,
+      "ambient_temperature": 32.88
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.376
+    },
+    "battery": {
+      "voltage": 13.347,
+      "current": 0.421,
+      "temperature": 34.33
+    },
+    "inverter": {
+      "voltage": 18.476,
+      "current": 0.797,
+      "temperature": 47.99,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013062
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.394,
+      "current": 0.724
+    },
+    "environment": {
+      "irradiance": 806.37,
+      "panel_temperature": 43.5,
+      "ambient_temperature": 31.47
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.477
+    },
+    "battery": {
+      "voltage": 13.57,
+      "current": 0.247,
+      "temperature": 35.11
+    },
+    "inverter": {
+      "voltage": 18.394,
+      "current": 0.724,
+      "temperature": 48.5,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.011927
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.099,
+      "current": 0.682
+    },
+    "environment": {
+      "irradiance": 721.62,
+      "panel_temperature": 42.62,
+      "ambient_temperature": 31.36
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.214
+    },
+    "battery": {
+      "voltage": 12.523,
+      "current": 0.468,
+      "temperature": 35.53
+    },
+    "inverter": {
+      "voltage": 18.099,
+      "current": 0.682,
+      "temperature": 46.35,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009406
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.752,
+      "current": 0.576
+    },
+    "environment": {
+      "irradiance": 586.01,
+      "panel_temperature": 38.91,
+      "ambient_temperature": 30.92
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.377
+    },
+    "battery": {
+      "voltage": 13.649,
+      "current": 0.199,
+      "temperature": 30.28
+    },
+    "inverter": {
+      "voltage": 17.752,
+      "current": 0.576,
+      "temperature": 45.4,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006904
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.329,
+      "current": 0.407
+    },
+    "environment": {
+      "irradiance": 405.3,
+      "panel_temperature": 35.16,
+      "ambient_temperature": 29.79
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.517
+    },
+    "battery": {
+      "voltage": 12.706,
+      "current": -0.11,
+      "temperature": 35.23
+    },
+    "inverter": {
+      "voltage": 17.329,
+      "current": 0.407,
+      "temperature": 39.4,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003314
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.889,
+      "current": 0.203
+    },
+    "environment": {
+      "irradiance": 206.25,
+      "panel_temperature": 32.73,
+      "ambient_temperature": 30.35
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.302
+    },
+    "battery": {
+      "voltage": 12.417,
+      "current": -0.099,
+      "temperature": 35.41
+    },
+    "inverter": {
+      "voltage": 16.889,
+      "current": 0.203,
+      "temperature": 39.31,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-06T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.425,
+      "current": 0.013
+    },
+    "environment": {
+      "irradiance": 8.88,
+      "panel_temperature": 26.99,
+      "ambient_temperature": 26.97
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.456
+    },
+    "battery": {
+      "voltage": 13.164,
+      "current": -0.442,
+      "temperature": 35.07
+    },
+    "inverter": {
+      "voltage": 16.425,
+      "current": 0.013,
+      "temperature": 34.13,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.543,
+      "current": 0.003
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 27.42,
+      "ambient_temperature": 27.95
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.597
+    },
+    "battery": {
+      "voltage": 12.931,
+      "current": -0.594,
+      "temperature": 33.95
+    },
+    "inverter": {
+      "voltage": 16.543,
+      "current": 0.003,
+      "temperature": 36.91,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003515
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.619,
+      "current": 0.208
+    },
+    "environment": {
+      "irradiance": 194.56,
+      "panel_temperature": 33.08,
+      "ambient_temperature": 29.67
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.399
+    },
+    "battery": {
+      "voltage": 14.027,
+      "current": -0.191,
+      "temperature": 34.79
+    },
+    "inverter": {
+      "voltage": 16.619,
+      "current": 0.208,
+      "temperature": 37.06,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006971
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.42,
+      "current": 0.409
+    },
+    "environment": {
+      "irradiance": 406.7,
+      "panel_temperature": 36.92,
+      "ambient_temperature": 30.58
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.464
+    },
+    "battery": {
+      "voltage": 13.909,
+      "current": -0.055,
+      "temperature": 35.42
+    },
+    "inverter": {
+      "voltage": 17.42,
+      "current": 0.409,
+      "temperature": 41.61,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009669
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.808,
+      "current": 0.539
+    },
+    "environment": {
+      "irradiance": 584.05,
+      "panel_temperature": 39.86,
+      "ambient_temperature": 30.94
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.318
+    },
+    "battery": {
+      "voltage": 13.745,
+      "current": 0.221,
+      "temperature": 30.79
+    },
+    "inverter": {
+      "voltage": 17.808,
+      "current": 0.539,
+      "temperature": 42.46,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01199
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T10:00:00+00:00",
+    "solar": {
+      "voltage": 18.149,
+      "current": 0.656
+    },
+    "environment": {
+      "irradiance": 725.16,
+      "panel_temperature": 43.71,
+      "ambient_temperature": 32.0
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.53
+    },
+    "battery": {
+      "voltage": 13.267,
+      "current": 0.126,
+      "temperature": 34.48
+    },
+    "inverter": {
+      "voltage": 18.149,
+      "current": 0.656,
+      "temperature": 47.1,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0142
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.431,
+      "current": 0.754
+    },
+    "environment": {
+      "irradiance": 825.33,
+      "panel_temperature": 45.56,
+      "ambient_temperature": 33.89
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.49
+    },
+    "battery": {
+      "voltage": 14.164,
+      "current": 0.264,
+      "temperature": 34.83
+    },
+    "inverter": {
+      "voltage": 18.431,
+      "current": 0.754,
+      "temperature": 49.25,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01448
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.263,
+      "current": 0.819
+    },
+    "environment": {
+      "irradiance": 895.1,
+      "panel_temperature": 44.92,
+      "ambient_temperature": 31.42
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.469
+    },
+    "battery": {
+      "voltage": 13.452,
+      "current": 0.35,
+      "temperature": 35.64
+    },
+    "inverter": {
+      "voltage": 18.263,
+      "current": 0.819,
+      "temperature": 49.72,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015524
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.348,
+      "current": 0.831
+    },
+    "environment": {
+      "irradiance": 905.42,
+      "panel_temperature": 45.92,
+      "ambient_temperature": 31.58
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.289
+    },
+    "battery": {
+      "voltage": 12.514,
+      "current": 0.542,
+      "temperature": 35.46
+    },
+    "inverter": {
+      "voltage": 18.348,
+      "current": 0.831,
+      "temperature": 49.88,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01472
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.166,
+      "current": 0.809
+    },
+    "environment": {
+      "irradiance": 891.92,
+      "panel_temperature": 46.07,
+      "ambient_temperature": 31.79
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.239
+    },
+    "battery": {
+      "voltage": 13.997,
+      "current": 0.57,
+      "temperature": 32.72
+    },
+    "inverter": {
+      "voltage": 18.166,
+      "current": 0.809,
+      "temperature": 46.92,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013771
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.329,
+      "current": 0.743
+    },
+    "environment": {
+      "irradiance": 841.92,
+      "panel_temperature": 46.31,
+      "ambient_temperature": 33.84
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.366
+    },
+    "battery": {
+      "voltage": 12.578,
+      "current": 0.377,
+      "temperature": 32.45
+    },
+    "inverter": {
+      "voltage": 18.329,
+      "current": 0.743,
+      "temperature": 47.59,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012184
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.262,
+      "current": 0.698
+    },
+    "environment": {
+      "irradiance": 745.77,
+      "panel_temperature": 42.59,
+      "ambient_temperature": 31.52
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.24
+    },
+    "battery": {
+      "voltage": 13.634,
+      "current": 0.458,
+      "temperature": 35.87
+    },
+    "inverter": {
+      "voltage": 18.262,
+      "current": 0.698,
+      "temperature": 46.36,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.00937
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.848,
+      "current": 0.543
+    },
+    "environment": {
+      "irradiance": 569.66,
+      "panel_temperature": 37.98,
+      "ambient_temperature": 30.19
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.465
+    },
+    "battery": {
+      "voltage": 13.555,
+      "current": 0.078,
+      "temperature": 30.13
+    },
+    "inverter": {
+      "voltage": 17.848,
+      "current": 0.543,
+      "temperature": 43.93,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006815
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.073,
+      "current": 0.431
+    },
+    "environment": {
+      "irradiance": 415.68,
+      "panel_temperature": 35.41,
+      "ambient_temperature": 29.05
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.283
+    },
+    "battery": {
+      "voltage": 12.789,
+      "current": 0.148,
+      "temperature": 31.97
+    },
+    "inverter": {
+      "voltage": 17.073,
+      "current": 0.431,
+      "temperature": 42.71,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003378
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.663,
+      "current": 0.183
+    },
+    "environment": {
+      "irradiance": 188.21,
+      "panel_temperature": 31.16,
+      "ambient_temperature": 27.62
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.3
+    },
+    "battery": {
+      "voltage": 12.714,
+      "current": -0.117,
+      "temperature": 30.15
+    },
+    "inverter": {
+      "voltage": 16.663,
+      "current": 0.183,
+      "temperature": 38.47,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.000356
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-07T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.394,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 28.35,
+      "ambient_temperature": 28.87
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.221
+    },
+    "battery": {
+      "voltage": 13.735,
+      "current": -0.221,
+      "temperature": 34.47
+    },
+    "inverter": {
+      "voltage": 16.394,
+      "current": 0.0,
+      "temperature": 35.1,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.502,
+      "current": 0.018
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 27.26,
+      "ambient_temperature": 28.04
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.217
+    },
+    "battery": {
+      "voltage": 13.81,
+      "current": -0.2,
+      "temperature": 33.13
+    },
+    "inverter": {
+      "voltage": 16.502,
+      "current": 0.018,
+      "temperature": 36.47,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003951
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.86,
+      "current": 0.226
+    },
+    "environment": {
+      "irradiance": 209.3,
+      "panel_temperature": 30.89,
+      "ambient_temperature": 27.8
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.396
+    },
+    "battery": {
+      "voltage": 14.037,
+      "current": -0.17,
+      "temperature": 30.48
+    },
+    "inverter": {
+      "voltage": 16.86,
+      "current": 0.226,
+      "temperature": 36.43,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007545
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.364,
+      "current": 0.407
+    },
+    "environment": {
+      "irradiance": 417.6,
+      "panel_temperature": 36.02,
+      "ambient_temperature": 29.49
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 13.355,
+      "current": -0.191,
+      "temperature": 33.63
+    },
+    "inverter": {
+      "voltage": 17.364,
+      "current": 0.407,
+      "temperature": 41.08,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009735
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.806,
+      "current": 0.55
+    },
+    "environment": {
+      "irradiance": 572.27,
+      "panel_temperature": 41.06,
+      "ambient_temperature": 32.18
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.286
+    },
+    "battery": {
+      "voltage": 13.213,
+      "current": 0.264,
+      "temperature": 32.03
+    },
+    "inverter": {
+      "voltage": 17.806,
+      "current": 0.55,
+      "temperature": 42.5,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01255
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T10:00:00+00:00",
+    "solar": {
+      "voltage": 18.08,
+      "current": 0.683
+    },
+    "environment": {
+      "irradiance": 740.41,
+      "panel_temperature": 41.65,
+      "ambient_temperature": 30.69
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.261
+    },
+    "battery": {
+      "voltage": 14.061,
+      "current": 0.422,
+      "temperature": 34.99
+    },
+    "inverter": {
+      "voltage": 18.08,
+      "current": 0.683,
+      "temperature": 44.37,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014198
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.205,
+      "current": 0.759
+    },
+    "environment": {
+      "irradiance": 835.58,
+      "panel_temperature": 46.38,
+      "ambient_temperature": 33.22
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.425
+    },
+    "battery": {
+      "voltage": 12.993,
+      "current": 0.334,
+      "temperature": 32.12
+    },
+    "inverter": {
+      "voltage": 18.205,
+      "current": 0.759,
+      "temperature": 46.02,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014885
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.65,
+      "current": 0.821
+    },
+    "environment": {
+      "irradiance": 934.45,
+      "panel_temperature": 48.44,
+      "ambient_temperature": 33.98
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.341
+    },
+    "battery": {
+      "voltage": 13.44,
+      "current": 0.481,
+      "temperature": 33.94
+    },
+    "inverter": {
+      "voltage": 18.65,
+      "current": 0.821,
+      "temperature": 47.87,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015702
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.53,
+      "current": 0.829
+    },
+    "environment": {
+      "irradiance": 936.21,
+      "panel_temperature": 47.81,
+      "ambient_temperature": 34.04
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.523
+    },
+    "battery": {
+      "voltage": 13.921,
+      "current": 0.307,
+      "temperature": 34.91
+    },
+    "inverter": {
+      "voltage": 18.53,
+      "current": 0.829,
+      "temperature": 50.94,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014841
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.561,
+      "current": 0.817
+    },
+    "environment": {
+      "irradiance": 931.86,
+      "panel_temperature": 46.29,
+      "ambient_temperature": 31.45
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.272
+    },
+    "battery": {
+      "voltage": 13.665,
+      "current": 0.545,
+      "temperature": 32.04
+    },
+    "inverter": {
+      "voltage": 18.561,
+      "current": 0.817,
+      "temperature": 48.21,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.01433
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T15:00:00+00:00",
+    "solar": {
+      "voltage": 17.948,
+      "current": 0.772
+    },
+    "environment": {
+      "irradiance": 831.23,
+      "panel_temperature": 44.97,
+      "ambient_temperature": 32.7
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.212
+    },
+    "battery": {
+      "voltage": 13.743,
+      "current": 0.56,
+      "temperature": 32.52
+    },
+    "inverter": {
+      "voltage": 17.948,
+      "current": 0.772,
+      "temperature": 46.33,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012654
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.01,
+      "current": 0.662
+    },
+    "environment": {
+      "irradiance": 734.78,
+      "panel_temperature": 44.15,
+      "ambient_temperature": 32.57
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.221
+    },
+    "battery": {
+      "voltage": 12.683,
+      "current": 0.44,
+      "temperature": 34.04
+    },
+    "inverter": {
+      "voltage": 18.01,
+      "current": 0.662,
+      "temperature": 46.49,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.009855
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.526,
+      "current": 0.572
+    },
+    "environment": {
+      "irradiance": 580.92,
+      "panel_temperature": 39.67,
+      "ambient_temperature": 31.07
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.246
+    },
+    "battery": {
+      "voltage": 13.174,
+      "current": 0.326,
+      "temperature": 34.07
+    },
+    "inverter": {
+      "voltage": 17.526,
+      "current": 0.572,
+      "temperature": 42.85,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007191
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.383,
+      "current": 0.39
+    },
+    "environment": {
+      "irradiance": 411.52,
+      "panel_temperature": 34.77,
+      "ambient_temperature": 28.81
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.321
+    },
+    "battery": {
+      "voltage": 12.78,
+      "current": 0.069,
+      "temperature": 31.53
+    },
+    "inverter": {
+      "voltage": 17.383,
+      "current": 0.39,
+      "temperature": 39.72,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003843
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.834,
+      "current": 0.219
+    },
+    "environment": {
+      "irradiance": 202.8,
+      "panel_temperature": 32.25,
+      "ambient_temperature": 29.85
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.4
+    },
+    "battery": {
+      "voltage": 13.9,
+      "current": -0.181,
+      "temperature": 30.43
+    },
+    "inverter": {
+      "voltage": 16.834,
+      "current": 0.219,
+      "temperature": 39.27,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-08T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.789,
+      "current": 0.034
+    },
+    "environment": {
+      "irradiance": 18.09,
+      "panel_temperature": 25.94,
+      "ambient_temperature": 26.63
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.43
+    },
+    "battery": {
+      "voltage": 13.432,
+      "current": -0.396,
+      "temperature": 32.51
+    },
+    "inverter": {
+      "voltage": 16.789,
+      "current": 0.034,
+      "temperature": 36.11,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.571,
+      "current": 0.013
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 28.08,
+      "ambient_temperature": 27.47
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.568
+    },
+    "battery": {
+      "voltage": 12.559,
+      "current": -0.555,
+      "temperature": 31.46
+    },
+    "inverter": {
+      "voltage": 16.571,
+      "current": 0.013,
+      "temperature": 36.38,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003399
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.847,
+      "current": 0.224
+    },
+    "environment": {
+      "irradiance": 221.4,
+      "panel_temperature": 31.74,
+      "ambient_temperature": 28.8
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.267
+    },
+    "battery": {
+      "voltage": 13.319,
+      "current": -0.044,
+      "temperature": 33.06
+    },
+    "inverter": {
+      "voltage": 16.847,
+      "current": 0.224,
+      "temperature": 36.78,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007326
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.576,
+      "current": 0.42
+    },
+    "environment": {
+      "irradiance": 443.33,
+      "panel_temperature": 38.14,
+      "ambient_temperature": 30.85
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.259
+    },
+    "battery": {
+      "voltage": 12.755,
+      "current": 0.161,
+      "temperature": 34.56
+    },
+    "inverter": {
+      "voltage": 17.576,
+      "current": 0.42,
+      "temperature": 42.06,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010164
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.884,
+      "current": 0.59
+    },
+    "environment": {
+      "irradiance": 615.68,
+      "panel_temperature": 41.16,
+      "ambient_temperature": 31.94
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.38
+    },
+    "battery": {
+      "voltage": 14.063,
+      "current": 0.21,
+      "temperature": 33.81
+    },
+    "inverter": {
+      "voltage": 17.884,
+      "current": 0.59,
+      "temperature": 44.49,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012457
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.778,
+      "current": 0.719
+    },
+    "environment": {
+      "irradiance": 768.51,
+      "panel_temperature": 43.12,
+      "ambient_temperature": 32.29
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.321
+    },
+    "battery": {
+      "voltage": 12.894,
+      "current": 0.398,
+      "temperature": 33.04
+    },
+    "inverter": {
+      "voltage": 17.778,
+      "current": 0.719,
+      "temperature": 44.75,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014801
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T11:00:00+00:00",
+    "solar": {
+      "voltage": 17.984,
+      "current": 0.815
+    },
+    "environment": {
+      "irradiance": 868.97,
+      "panel_temperature": 44.87,
+      "ambient_temperature": 31.18
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.542
+    },
+    "battery": {
+      "voltage": 13.507,
+      "current": 0.273,
+      "temperature": 32.78
+    },
+    "inverter": {
+      "voltage": 17.984,
+      "current": 0.815,
+      "temperature": 48.06,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015674
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.592,
+      "current": 0.843
+    },
+    "environment": {
+      "irradiance": 953.27,
+      "panel_temperature": 48.26,
+      "ambient_temperature": 34.06
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.329
+    },
+    "battery": {
+      "voltage": 13.256,
+      "current": 0.514,
+      "temperature": 30.37
+    },
+    "inverter": {
+      "voltage": 18.592,
+      "current": 0.843,
+      "temperature": 47.9,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.016109
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.413,
+      "current": 0.837
+    },
+    "environment": {
+      "irradiance": 955.18,
+      "panel_temperature": 47.29,
+      "ambient_temperature": 32.53
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.299
+    },
+    "battery": {
+      "voltage": 13.188,
+      "current": 0.538,
+      "temperature": 33.14
+    },
+    "inverter": {
+      "voltage": 18.413,
+      "current": 0.837,
+      "temperature": 49.09,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015926
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.27,
+      "current": 0.846
+    },
+    "environment": {
+      "irradiance": 933.49,
+      "panel_temperature": 46.04,
+      "ambient_temperature": 32.22
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.516
+    },
+    "battery": {
+      "voltage": 13.565,
+      "current": 0.331,
+      "temperature": 30.57
+    },
+    "inverter": {
+      "voltage": 18.27,
+      "current": 0.846,
+      "temperature": 47.27,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014423
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.519,
+      "current": 0.802
+    },
+    "environment": {
+      "irradiance": 887.36,
+      "panel_temperature": 46.8,
+      "ambient_temperature": 33.18
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.333
+    },
+    "battery": {
+      "voltage": 13.449,
+      "current": 0.469,
+      "temperature": 32.1
+    },
+    "inverter": {
+      "voltage": 18.519,
+      "current": 0.802,
+      "temperature": 46.88,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.012475
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.334,
+      "current": 0.706
+    },
+    "environment": {
+      "irradiance": 785.67,
+      "panel_temperature": 43.56,
+      "ambient_temperature": 31.59
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.351
+    },
+    "battery": {
+      "voltage": 13.825,
+      "current": 0.356,
+      "temperature": 34.02
+    },
+    "inverter": {
+      "voltage": 18.334,
+      "current": 0.706,
+      "temperature": 48.04,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010416
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T17:00:00+00:00",
+    "solar": {
+      "voltage": 17.836,
+      "current": 0.586
+    },
+    "environment": {
+      "irradiance": 624.35,
+      "panel_temperature": 41.09,
+      "ambient_temperature": 31.67
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.345
+    },
+    "battery": {
+      "voltage": 13.053,
+      "current": 0.242,
+      "temperature": 31.29
+    },
+    "inverter": {
+      "voltage": 17.836,
+      "current": 0.586,
+      "temperature": 43.09,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007416
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.137,
+      "current": 0.462
+    },
+    "environment": {
+      "irradiance": 445.42,
+      "panel_temperature": 35.31,
+      "ambient_temperature": 29.35
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.24
+    },
+    "battery": {
+      "voltage": 13.788,
+      "current": 0.222,
+      "temperature": 35.3
+    },
+    "inverter": {
+      "voltage": 17.137,
+      "current": 0.462,
+      "temperature": 43.02,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.003775
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T19:00:00+00:00",
+    "solar": {
+      "voltage": 16.814,
+      "current": 0.188
+    },
+    "environment": {
+      "irradiance": 193.85,
+      "panel_temperature": 32.08,
+      "ambient_temperature": 29.91
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.533
+    },
+    "battery": {
+      "voltage": 13.788,
+      "current": -0.344,
+      "temperature": 30.99
+    },
+    "inverter": {
+      "voltage": 16.814,
+      "current": 0.188,
+      "temperature": 39.14,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-09T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.343,
+      "current": 0.0
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 28.09,
+      "ambient_temperature": 27.73
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.314
+    },
+    "battery": {
+      "voltage": 13.747,
+      "current": -0.314,
+      "temperature": 33.2
+    },
+    "inverter": {
+      "voltage": 16.343,
+      "current": 0.0,
+      "temperature": 34.8,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T06:00:00+00:00",
+    "solar": {
+      "voltage": 16.421,
+      "current": 0.018
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 28.58,
+      "ambient_temperature": 27.91
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.594
+    },
+    "battery": {
+      "voltage": 13.231,
+      "current": -0.576,
+      "temperature": 32.29
+    },
+    "inverter": {
+      "voltage": 16.421,
+      "current": 0.018,
+      "temperature": 34.13,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.004172
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T07:00:00+00:00",
+    "solar": {
+      "voltage": 16.731,
+      "current": 0.222
+    },
+    "environment": {
+      "irradiance": 223.89,
+      "panel_temperature": 34.02,
+      "ambient_temperature": 30.06
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.456
+    },
+    "battery": {
+      "voltage": 13.973,
+      "current": -0.234,
+      "temperature": 30.62
+    },
+    "inverter": {
+      "voltage": 16.731,
+      "current": 0.222,
+      "temperature": 38.58,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.007837
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T08:00:00+00:00",
+    "solar": {
+      "voltage": 17.266,
+      "current": 0.464
+    },
+    "environment": {
+      "irradiance": 451.18,
+      "panel_temperature": 36.82,
+      "ambient_temperature": 29.52
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.259
+    },
+    "battery": {
+      "voltage": 13.187,
+      "current": 0.205,
+      "temperature": 31.33
+    },
+    "inverter": {
+      "voltage": 17.266,
+      "current": 0.464,
+      "temperature": 43.55,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010886
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T09:00:00+00:00",
+    "solar": {
+      "voltage": 17.743,
+      "current": 0.586
+    },
+    "environment": {
+      "irradiance": 621.05,
+      "panel_temperature": 38.12,
+      "ambient_temperature": 29.7
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.598
+    },
+    "battery": {
+      "voltage": 13.075,
+      "current": -0.011,
+      "temperature": 35.58
+    },
+    "inverter": {
+      "voltage": 17.743,
+      "current": 0.586,
+      "temperature": 42.43,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013028
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T10:00:00+00:00",
+    "solar": {
+      "voltage": 17.97,
+      "current": 0.752
+    },
+    "environment": {
+      "irradiance": 798.79,
+      "panel_temperature": 44.04,
+      "ambient_temperature": 32.78
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.478
+    },
+    "battery": {
+      "voltage": 12.65,
+      "current": 0.274,
+      "temperature": 32.69
+    },
+    "inverter": {
+      "voltage": 17.97,
+      "current": 0.752,
+      "temperature": 47.8,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.014952
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T11:00:00+00:00",
+    "solar": {
+      "voltage": 18.282,
+      "current": 0.801
+    },
+    "environment": {
+      "irradiance": 876.23,
+      "panel_temperature": 45.59,
+      "ambient_temperature": 31.77
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.411
+    },
+    "battery": {
+      "voltage": 12.6,
+      "current": 0.39,
+      "temperature": 31.81
+    },
+    "inverter": {
+      "voltage": 18.282,
+      "current": 0.801,
+      "temperature": 47.3,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015722
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T12:00:00+00:00",
+    "solar": {
+      "voltage": 18.171,
+      "current": 0.873
+    },
+    "environment": {
+      "irradiance": 952.32,
+      "panel_temperature": 47.96,
+      "ambient_temperature": 33.76
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.439
+    },
+    "battery": {
+      "voltage": 12.43,
+      "current": 0.434,
+      "temperature": 31.45
+    },
+    "inverter": {
+      "voltage": 18.171,
+      "current": 0.873,
+      "temperature": 49.35,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.016229
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T13:00:00+00:00",
+    "solar": {
+      "voltage": 18.414,
+      "current": 0.88
+    },
+    "environment": {
+      "irradiance": 982.18,
+      "panel_temperature": 47.56,
+      "ambient_temperature": 33.34
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.234
+    },
+    "battery": {
+      "voltage": 14.154,
+      "current": 0.646,
+      "temperature": 33.16
+    },
+    "inverter": {
+      "voltage": 18.414,
+      "current": 0.88,
+      "temperature": 48.0,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015882
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T14:00:00+00:00",
+    "solar": {
+      "voltage": 18.433,
+      "current": 0.872
+    },
+    "environment": {
+      "irradiance": 975.29,
+      "panel_temperature": 47.45,
+      "ambient_temperature": 33.04
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.592
+    },
+    "battery": {
+      "voltage": 12.857,
+      "current": 0.28,
+      "temperature": 34.73
+    },
+    "inverter": {
+      "voltage": 18.433,
+      "current": 0.872,
+      "temperature": 47.69,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.015197
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T15:00:00+00:00",
+    "solar": {
+      "voltage": 18.428,
+      "current": 0.79
+    },
+    "environment": {
+      "irradiance": 893.21,
+      "panel_temperature": 46.83,
+      "ambient_temperature": 32.89
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.218
+    },
+    "battery": {
+      "voltage": 13.383,
+      "current": 0.572,
+      "temperature": 31.05
+    },
+    "inverter": {
+      "voltage": 18.428,
+      "current": 0.79,
+      "temperature": 49.65,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.013152
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T16:00:00+00:00",
+    "solar": {
+      "voltage": 18.278,
+      "current": 0.704
+    },
+    "environment": {
+      "irradiance": 795.79,
+      "panel_temperature": 44.7,
+      "ambient_temperature": 32.5
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.51
+    },
+    "battery": {
+      "voltage": 13.224,
+      "current": 0.194,
+      "temperature": 30.26
+    },
+    "inverter": {
+      "voltage": 18.278,
+      "current": 0.704,
+      "temperature": 46.11,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.010438
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T17:00:00+00:00",
+    "solar": {
+      "voltage": 18.01,
+      "current": 0.57
+    },
+    "environment": {
+      "irradiance": 608.46,
+      "panel_temperature": 41.58,
+      "ambient_temperature": 32.42
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.301
+    },
+    "battery": {
+      "voltage": 13.756,
+      "current": 0.268,
+      "temperature": 32.14
+    },
+    "inverter": {
+      "voltage": 18.01,
+      "current": 0.57,
+      "temperature": 42.89,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.006996
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T18:00:00+00:00",
+    "solar": {
+      "voltage": 17.317,
+      "current": 0.461
+    },
+    "environment": {
+      "irradiance": 447.93,
+      "panel_temperature": 35.63,
+      "ambient_temperature": 29.67
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.497
+    },
+    "battery": {
+      "voltage": 14.01,
+      "current": -0.036,
+      "temperature": 35.84
+    },
+    "inverter": {
+      "voltage": 17.317,
+      "current": 0.461,
+      "temperature": 41.27,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.004191
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T19:00:00+00:00",
+    "solar": {
+      "voltage": 17.125,
+      "current": 0.235
+    },
+    "environment": {
+      "irradiance": 222.33,
+      "panel_temperature": 33.76,
+      "ambient_temperature": 30.39
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.232
+    },
+    "battery": {
+      "voltage": 13.484,
+      "current": 0.003,
+      "temperature": 33.27
+    },
+    "inverter": {
+      "voltage": 17.125,
+      "current": 0.235,
+      "temperature": 39.62,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  },
+  {
+    "installation_id": "INST-001",
+    "timestamp": "2026-01-10T20:00:00+00:00",
+    "solar": {
+      "voltage": 16.384,
+      "current": 0.004
+    },
+    "environment": {
+      "irradiance": 0.0,
+      "panel_temperature": 27.06,
+      "ambient_temperature": 26.74
+    },
+    "grid": {
+      "voltage": 0.0,
+      "current": 0.0
+    },
+    "load": {
+      "voltage": 12.0,
+      "current": 0.37
+    },
+    "battery": {
+      "voltage": 13.642,
+      "current": -0.366,
+      "temperature": 30.25
+    },
+    "inverter": {
+      "voltage": 16.384,
+      "current": 0.004,
+      "temperature": 34.41,
+      "status_code": 0
+    },
+    "target_next_hour_generation": 0.0
+  }
+]
