@@ -5,7 +5,8 @@ WattWise EMS AI Module API Service.
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
-
+from fastapi.middleware.cors import CORSMiddleware
+from ems.config import config
 from ems.router import router as ems_router
 
 
@@ -13,6 +14,15 @@ app = FastAPI(
     title="WattWise EMS AI Module",
     description="Energy Management System AI API & Dashboard",
     version="1.0.0"
+)
+
+# Enable CORS for frontend & backend integration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=config.cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Include EMS Module Endpoints

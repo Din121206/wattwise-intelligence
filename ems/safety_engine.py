@@ -13,6 +13,9 @@ from ems.models import (
 )
 
 
+from ems.config import config
+
+
 class EMSSafetyEngine:
     """
     Safety Intercept Layer.
@@ -20,7 +23,8 @@ class EMSSafetyEngine:
     critical load protection, and approval flags.
     """
 
-    MAX_SYSTEM_LOAD_KW = 10.0     # kW Absolute physical system safety ceiling
+    def __init__(self, max_system_load_kw: float = None):
+        self.max_system_load_kw = max_system_load_kw or config.MAX_SYSTEM_LOAD_KW
 
     def validate(self, decision: EMSDecision, state: EnergyState) -> SafetyResult:
         violations: List[str] = []
@@ -31,10 +35,10 @@ class EMSSafetyEngine:
                 f"User approval check failed: Decision status is {decision.approval_status.value}, expected APPROVED."
             )
 
-        # 3. System Load Safety Limits
-        if state.load_consumption_kw > self.MAX_SYSTEM_LOAD_KW:
+        # 2. System Load Safety Limits
+        if state.load_consumption_kw > self.max_system_load_kw:
             violations.append(
-                f"Excessive system load detected ({state.load_consumption_kw:.2f} kW > max safe limit {self.MAX_SYSTEM_LOAD_KW:.2f} kW)."
+                f"Excessive system load detected ({state.load_consumption_kw:.2f} kW > max safe limit {self.max_system_load_kw:.2f} kW)."
             )
 
         # 4. Critical Load Protection Check
