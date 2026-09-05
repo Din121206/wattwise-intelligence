@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WattWise EMS — AI Energy Control Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090D16;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --primary: #10B981;
+      --primary-glow: rgba(16, 185, 129, 0.25);
+      --accent-blue: #3B82F6;
+      --accent-purple: #8B5CF6;
+      --accent-amber: #F59E0B;
+      --accent-red: #EF4444;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 10% 10%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.10) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border-card);
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #fff;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #fff, #9CA3AF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--primary);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .scenarios-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      background: var(--bg-card);
+      padding: 1rem 1.25rem;
+      border-radius: 14px;
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(10px);
+    }
+
+    .scenarios-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 0.5rem;
+    }
+
+    .scenario-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      padding: 0.4rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .scenario-chip:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1.75rem;
+    }
+
+    @media (max-width: 1024px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      padding: 1.75rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .input-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .input-value {
+      font-family: var(--font-mono);
+      color: var(--primary);
+    }
+
+    .range-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+      transition: background 0.2s;
+    }
+
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--primary-glow);
+      transition: transform 0.15s;
+    }
+
+    .range-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    .number-input {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-card);
+      color: #fff;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      width: 90px;
+      text-align: right;
+    }
+
+    .number-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #059669);
+      color: #fff;
+      border: none;
+      padding: 0.95rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      box-shadow: 0 4px 20px var(--primary-glow);
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* Decision Display */
+    .decision-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.6rem 1.25rem;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .action-BATTERY_CHARGE {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .action-BATTERY_DISCHARGE {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-amber);
+      color: var(--accent-amber);
+    }
+
+    .action-GRID_EXPORT {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid var(--accent-blue);
+      color: var(--accent-blue);
+    }
+
+    .action-GRID_IMPORT {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid var(--accent-purple);
+      color: var(--accent-purple);
+    }
+
+    .action-CRITICAL_LOAD_PROTECTION {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid var(--accent-red);
+      color: var(--accent-red);
+    }
+
+    .action-OPTIMIZE_LOAD {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .metric-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .metric-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metric-val {
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    .reason-box {
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      padding: 1.1rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: #E5E7EB;
+    }
+
+    /* Approval buttons */
+    .approval-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .approval-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-approve {
+      flex: 1;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 0.8rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-approve:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-reject {
+      flex: 1;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid var(--accent-red);
+      color: var(--accent-red);
+      padding: 0.8rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-reject:hover {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
+    /* Pipeline Flow Stepper */
+    .pipeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      padding: 1.5rem;
+    }
+
+    .flow-stepper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .flow-node {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-card);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .flow-node.active {
+      border-color: var(--primary);
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--primary);
+    }
+
+    .flow-node.blocked {
+      border-color: var(--accent-red);
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--accent-red);
+    }
+
+    .flow-arrow {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .hw-log {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      background: #05070D;
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 1rem;
+      color: #34D399;
+      margin-top: 1rem;
+      min-height: 70px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo-icon">⚡</div>
+      <div class="brand-title">WattWise EMS AI Control Center</div>
+    </div>
+    <div class="status-badge">
+      <div class="pulse-dot"></div>
+      AI ENGINE ONLINE
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Pre-packaged Scenarios Quick Bar -->
+    <div class="scenarios-bar">
+      <span class="scenarios-title">Quick Scenarios:</span>
+      <button class="scenario-chip" onclick="loadScenario('excess_solar')">Excess Solar (Charge)</button>
+      <button class="scenario-chip" onclick="loadScenario('battery_full')">Battery Full (Export)</button>
+      <button class="scenario-chip" onclick="loadScenario('peak_consumption')">Peak Consumption (Discharge)</button>
+      <button class="scenario-chip" onclick="loadScenario('low_battery')">Low Battery (Import)</button>
+      <button class="scenario-chip" onclick="loadScenario('critical_load_protection')">Critical Protection</button>
+      <button class="scenario-chip" onclick="loadScenario('normal_operation')">Normal Operation</button>
+    </div>
+
+    <div class="dashboard-grid">
+      
+      <!-- Telemetry Input Controls Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">🎛️ Live Energy Telemetry</h2>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Interactive Telemetry Controls</span>
+        </div>
+
+        <!-- Solar Generation -->
+        <div class="input-group">
+          <div class="input-header">
+            <span>☀️ Solar Generation</span>
+            <span class="input-value" id="val-solar">8.50 kW</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-solar" min="0" max="15" step="0.1" value="8.5" oninput="updateInput('solar', this.value)">
+        </div>
+
+        <!-- Load Consumption -->
+        <div class="input-group">
+          <div class="input-header">
+            <span>🔌 Load Consumption</span>
+            <span class="input-value" id="val-load">4.00 kW</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-load" min="0" max="15" step="0.1" value="4.0" oninput="updateInput('load', this.value)">
+        </div>
+
+        <!-- Battery SOC -->
+        <div class="input-group">
+          <div class="input-header">
+            <span>🔋 Battery SOC</span>
+            <span class="input-value" id="val-soc">72 %</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-soc" min="0" max="100" step="1" value="72" oninput="updateInput('soc', this.value)">
+        </div>
+
+        <!-- Grid Import -->
+        <div class="input-group">
+          <div class="input-header">
+            <span>⚡ Grid Import</span>
+            <span class="input-value" id="val-grid">1.20 kW</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-grid" min="0" max="15" step="0.1" value="1.2" oninput="updateInput('grid', this.value)">
+        </div>
+
+        <!-- Critical Load -->
+        <div class="input-group">
+          <div class="input-header">
+            <span>🛡️ Critical Load Reserve</span>
+            <span class="input-value" id="val-critical">0.50 kW</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-critical" min="0" max="5" step="0.1" value="0.5" oninput="updateInput('critical', this.value)">
+        </div>
+
+        <button class="btn-primary" onclick="analyzeEnergy()">
+          ⚡ ANALYZE ENERGY
+        </button>
+      </div>
+
+      <!-- AI Recommendation & Approval Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">🤖 AI Recommendation</h2>
+          <div id="approval-status-badge" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-amber); padding: 0.25rem 0.6rem; border-radius: 6px; background: rgba(245, 158, 11, 0.15);">
+            PENDING APPROVAL
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; text-transform: uppercase;">Recommended Action</div>
+            <div class="decision-badge action-BATTERY_CHARGE" id="rec-action">
+              BATTERY_CHARGE
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; text-transform: uppercase;">Target Device</div>
+            <div style="font-weight: 600; color: #fff;" id="rec-device">Battery Storage Inverter</div>
+          </div>
+        </div>
+
+        <div class="metrics-row">
+          <div class="metric-card">
+            <span class="metric-label">AI Confidence</span>
+            <span class="metric-val" id="metric-confidence" style="color: var(--primary);">92%</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Net Surplus / Deficit</span>
+            <span class="metric-val" id="metric-surplus" style="color: var(--accent-blue);">+4.50 kW</span>
+          </div>
+        </div>
+
+        <div class="reason-box" id="rec-reason">
+          Excess solar detected: generation is 8.50 kW while consumption is 4.00 kW, creating 4.50 kW surplus. Battery SOC is 72.0%, so charging the battery is recommended.
+        </div>
+
+        <!-- Human Approval Buttons -->
+        <div class="approval-section">
+          <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Human Approval Action</div>
+          <div class="approval-buttons">
+            <button class="btn-approve" onclick="confirmDecision(true)" id="btn-approve-action">
+              ✓ Approve Decision
+            </button>
+            <button class="btn-reject" onclick="confirmDecision(false)" id="btn-reject-action">
+              ✕ Reject Decision
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Execution & Safety Pipeline Visualizer Card -->
+    <div class="pipeline-card">
+      <h3 style="font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+        🔗 Execution Pipeline (Energy Data → AI Decision → PENDING → User Approval → Safety Engine → ESP32 Hardware)
+      </h3>
+
+      <div class="flow-stepper">
+        <div class="flow-node active" id="node-telemetry">1. Telemetry Input</div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-node active" id="node-ai">2. AI Analysis</div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-node" id="node-approval">3. PENDING Approval</div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-node" id="node-safety">4. Safety Check</div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-node" id="node-hw">5. ESP32 Execution</div>
+      </div>
+
+      <div class="hw-log" id="hw-log-output">
+[SIMULATED ESP32 HARDWARE CONTROLLER LOG]
+Ready for energy telemetry analysis and approval confirmation.
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let currentDecisionId = null;
+    let telemetryState = {
+      solar_generation_kw: 8.5,
+      load_consumption_kw: 4.0,
+      battery_soc: 72.0,
+      grid_import_kw: 1.2,
+      critical_load_kw: 0.5
+    };
+
+    function updateInput(key, val) {
+      const numVal = parseFloat(val);
+      if (key === 'solar') {
+        telemetryState.solar_generation_kw = numVal;
+        document.getElementById('val-solar').innerText = numVal.toFixed(2) + ' kW';
+      } else if (key === 'load') {
+        telemetryState.load_consumption_kw = numVal;
+        document.getElementById('val-load').innerText = numVal.toFixed(2) + ' kW';
+      } else if (key === 'soc') {
+        telemetryState.battery_soc = numVal;
+        document.getElementById('val-soc').innerText = numVal + ' %';
+      } else if (key === 'grid') {
+        telemetryState.grid_import_kw = numVal;
+        document.getElementById('val-grid').innerText = numVal.toFixed(2) + ' kW';
+      } else if (key === 'critical') {
+        telemetryState.critical_load_kw = numVal;
+        document.getElementById('val-critical').innerText = numVal.toFixed(2) + ' kW';
+      }
+    }
+
+    async function loadScenario(key) {
+      try {
+        const res = await fetch('/api/ems/scenarios');
+        const data = await res.json();
+        if (data.scenarios && data.scenarios[key]) {
+          const sc = data.scenarios[key];
+          document.getElementById('slider-solar').value = sc.solar_generation_kw;
+          updateInput('solar', sc.solar_generation_kw);
+          
+          document.getElementById('slider-load').value = sc.load_consumption_kw;
+          updateInput('load', sc.load_consumption_kw);
+
+          document.getElementById('slider-soc').value = sc.battery_soc;
+          updateInput('soc', sc.battery_soc);
+
+          document.getElementById('slider-grid').value = sc.grid_import_kw;
+          updateInput('grid', sc.grid_import_kw);
+
+          document.getElementById('slider-critical').value = sc.critical_load_kw;
+          updateInput('critical', sc.critical_load_kw);
+
+          await analyzeEnergy();
+        }
+      } catch (err) {
+        console.error("Failed to load scenario:", err);
+      }
+    }
+
+    async function analyzeEnergy() {
+      const payload = {
+        installation_id: "DEMO-001",
+        solar_generation_kw: telemetryState.solar_generation_kw,
+        load_consumption_kw: telemetryState.load_consumption_kw,
+        battery_soc: telemetryState.battery_soc,
+        grid_import_kw: telemetryState.grid_import_kw,
+        critical_load_kw: telemetryState.critical_load_kw
+      };
+
+      try {
+        const res = await fetch('/api/ems/decision', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const decision = await res.json();
+        currentDecisionId = decision.decision_id;
+
+        // Update Decision Badge
+        const recBadge = document.getElementById('rec-action');
+        recBadge.innerText = decision.recommended_action;
+        recBadge.className = 'decision-badge action-' + decision.recommended_action;
+
+        document.getElementById('rec-device').innerText = decision.target_device;
+        document.getElementById('metric-confidence').innerText = Math.round(decision.confidence * 100) + '%';
+        
+        const surplus = payload.solar_generation_kw - payload.load_consumption_kw;
+        const surplusText = (surplus >= 0 ? '+' : '') + surplus.toFixed(2) + ' kW';
+        document.getElementById('metric-surplus').innerText = surplusText;
+        document.getElementById('metric-surplus').style.color = surplus >= 0 ? 'var(--primary)' : 'var(--accent-amber)';
+
+        document.getElementById('rec-reason').innerText = decision.reason;
+
+        // Reset Status
+        const statusBadge = document.getElementById('approval-status-badge');
+        statusBadge.innerText = 'PENDING APPROVAL';
+        statusBadge.style.color = 'var(--accent-amber)';
+        statusBadge.style.background = 'rgba(245, 158, 11, 0.15)';
+
+        // Reset Pipeline Stepper Nodes
+        resetPipelineNodes();
+        document.getElementById('node-approval').classList.add('active');
+
+        document.getElementById('hw-log-output').innerText = 
+          `[AI DECISION ENGINE]\nDecision ID: ${decision.decision_id}\nRecommended Action: ${decision.recommended_action}\nStatus: PENDING USER APPROVAL\nConfidence: ${Math.round(decision.confidence * 100)}%`;
+
+      } catch (err) {
+        console.error("Decision generation failed:", err);
+      }
+    }
+
+    async function confirmDecision(approved) {
+      if (!currentDecisionId) {
+        alert("Please run 'ANALYZE ENERGY' first!");
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/ems/confirm', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ decision_id: currentDecisionId, approved: approved })
+        });
+
+        const decision = await res.json();
+        
+        const statusBadge = document.getElementById('approval-status-badge');
+        if (approved) {
+          statusBadge.innerText = 'STATUS: APPROVED';
+          statusBadge.style.color = 'var(--primary)';
+          statusBadge.style.background = 'rgba(16, 185, 129, 0.15)';
+        } else {
+          statusBadge.innerText = 'STATUS: REJECTED';
+          statusBadge.style.color = 'var(--accent-red)';
+          statusBadge.style.background = 'rgba(239, 68, 68, 0.15)';
+        }
+
+        // Auto execute to demonstrate Safety Engine -> ESP32 flow
+        await executeDecision();
+
+      } catch (err) {
+        console.error("Confirmation failed:", err);
+      }
+    }
+
+    async function executeDecision() {
+      if (!currentDecisionId) return;
+
+      try {
+        const res = await fetch('/api/ems/execute', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ decision_id: currentDecisionId })
+        });
+
+        const execData = await res.json();
+        const safety = execData.safety_result;
+        const hw = execData.hardware_response;
+
+        const safetyNode = document.getElementById('node-safety');
+        const hwNode = document.getElementById('node-hw');
+
+        if (safety.is_safe) {
+          safetyNode.className = 'flow-node active';
+          hwNode.className = 'flow-node active';
+          hwNode.innerText = '5. ESP32: EXECUTED';
+        } else {
+          safetyNode.className = 'flow-node blocked';
+          hwNode.className = 'flow-node blocked';
+          hwNode.innerText = '5. ESP32: BLOCKED';
+        }
+
+        document.getElementById('hw-log-output').innerText = 
+          `[SAFETY ENGINE EVALUATION]\nIs Safe: ${safety.is_safe}\nSafety Reason: ${safety.reason}\n\n[SIMULATED ESP32 HARDWARE OUTPUT]\nStatus: ${hw.status}\nDevice: ${hw.device_name}\nCommand: ${hw.command_type}\nMessage: ${hw.message}`;
+
+      } catch (err) {
+        console.error("Execution failed:", err);
+      }
+    }
+
+    function resetPipelineNodes() {
+      document.getElementById('node-approval').className = 'flow-node';
+      document.getElementById('node-safety').className = 'flow-node';
+      document.getElementById('node-hw').className = 'flow-node';
+      document.getElementById('node-hw').innerText = '5. ESP32 Execution';
+    }
+
+    // Initial load
+    window.onload = function() {
+      analyzeEnergy();
+    };
+  </script>
+</body>
+</html>
