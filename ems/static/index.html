@@ -548,15 +548,6 @@
           <input type="range" class="range-slider" id="slider-load" min="0" max="15" step="0.1" value="4.0" oninput="updateInput('load', this.value)">
         </div>
 
-        <!-- Battery SOC -->
-        <div class="input-group">
-          <div class="input-header">
-            <span>🔋 Battery SOC</span>
-            <span class="input-value" id="val-soc">72 %</span>
-          </div>
-          <input type="range" class="range-slider" id="slider-soc" min="0" max="100" step="1" value="72" oninput="updateInput('soc', this.value)">
-        </div>
-
         <!-- Grid Import -->
         <div class="input-group">
           <div class="input-header">
@@ -665,7 +656,6 @@ Ready for energy telemetry analysis and approval confirmation.
     let telemetryState = {
       solar_generation_kw: 8.5,
       load_consumption_kw: 4.0,
-      battery_soc: 72.0,
       grid_import_kw: 1.2,
       critical_load_kw: 0.5
     };
@@ -678,9 +668,6 @@ Ready for energy telemetry analysis and approval confirmation.
       } else if (key === 'load') {
         telemetryState.load_consumption_kw = numVal;
         document.getElementById('val-load').innerText = numVal.toFixed(2) + ' kW';
-      } else if (key === 'soc') {
-        telemetryState.battery_soc = numVal;
-        document.getElementById('val-soc').innerText = numVal + ' %';
       } else if (key === 'grid') {
         telemetryState.grid_import_kw = numVal;
         document.getElementById('val-grid').innerText = numVal.toFixed(2) + ' kW';
@@ -702,9 +689,6 @@ Ready for energy telemetry analysis and approval confirmation.
           document.getElementById('slider-load').value = sc.load_consumption_kw;
           updateInput('load', sc.load_consumption_kw);
 
-          document.getElementById('slider-soc').value = sc.battery_soc;
-          updateInput('soc', sc.battery_soc);
-
           document.getElementById('slider-grid').value = sc.grid_import_kw;
           updateInput('grid', sc.grid_import_kw);
 
@@ -723,7 +707,6 @@ Ready for energy telemetry analysis and approval confirmation.
         installation_id: "DEMO-001",
         solar_generation_kw: telemetryState.solar_generation_kw,
         load_consumption_kw: telemetryState.load_consumption_kw,
-        battery_soc: telemetryState.battery_soc,
         grid_import_kw: telemetryState.grid_import_kw,
         critical_load_kw: telemetryState.critical_load_kw
       };

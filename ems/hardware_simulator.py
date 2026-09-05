@@ -47,8 +47,6 @@ class ESP32HardwareSimulator:
 
         # Simulate execution based on action type
         action_messages = {
-            EMSAction.BATTERY_CHARGE: f"[SIMULATED HARDWARE - {self.device_id}] Relays closed. Inverter set to CHARGE mode via Modbus RS485.",
-            EMSAction.BATTERY_DISCHARGE: f"[SIMULATED HARDWARE - {self.device_id}] Relays closed. Inverter set to DISCHARGE mode (Peak-Shaving).",
             EMSAction.GRID_EXPORT: f"[SIMULATED HARDWARE - {self.device_id}] Inverter sync engaged. Exporting surplus solar power to grid.",
             EMSAction.GRID_IMPORT: f"[SIMULATED HARDWARE - {self.device_id}] Grid switch closed. Supplying load demand from utility grid.",
             EMSAction.CRITICAL_LOAD_PROTECTION: f"[SIMULATED HARDWARE - {self.device_id}] Smart Breakers tripped. Shedding non-critical circuits; isolating critical load.",

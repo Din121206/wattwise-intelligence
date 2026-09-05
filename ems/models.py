@@ -15,8 +15,6 @@ class ApprovalState(str, Enum):
 
 
 class EMSAction(str, Enum):
-    BATTERY_CHARGE = "BATTERY_CHARGE"
-    BATTERY_DISCHARGE = "BATTERY_DISCHARGE"
     GRID_EXPORT = "GRID_EXPORT"
     GRID_IMPORT = "GRID_IMPORT"
     CRITICAL_LOAD_PROTECTION = "CRITICAL_LOAD_PROTECTION"
@@ -24,7 +22,6 @@ class EMSAction(str, Enum):
     LOAD_SHIFT = "LOAD_SHIFT"
     LOAD_REDUCE = "LOAD_REDUCE"
     MAINTAIN = "MAINTAIN"
-
 
 
 class HardwareStatus(str, Enum):
@@ -37,7 +34,6 @@ class EnergyState(BaseModel):
     installation_id: str = Field(..., json_schema_extra={"example": "INST-001"})
 
     solar_generation_kw: float = Field(..., ge=0.0, description="Current solar output in kW")
-    battery_soc: float = Field(..., ge=0.0, le=100.0, description="Battery state of charge percentage")
     grid_import_kw: float = Field(..., ge=0.0, description="Current power imported from grid in kW")
     load_consumption_kw: float = Field(..., ge=0.0, description="Total building load consumption in kW")
     critical_load_kw: float = Field(default=0.2, ge=0.0, description="Essential load requirement in kW")

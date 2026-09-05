@@ -16,12 +16,10 @@ from ems.models import (
 class EMSSafetyEngine:
     """
     Safety Intercept Layer.
-    Validates control decisions against battery limits, thermal/power constraints,
+    Validates control decisions against physical power constraints,
     critical load protection, and approval flags.
     """
 
-    MIN_SAFE_BATTERY_SOC = 10.0   # % Minimum battery reserve
-    MAX_SAFE_BATTERY_SOC = 100.0  # % Maximum battery charging limit
     MAX_SYSTEM_LOAD_KW = 10.0     # kW Absolute physical system safety ceiling
 
     def validate(self, decision: EMSDecision, state: EnergyState) -> SafetyResult:
@@ -32,19 +30,6 @@ class EMSSafetyEngine:
             violations.append(
                 f"User approval check failed: Decision status is {decision.approval_status.value}, expected APPROVED."
             )
-
-        # 2. Battery SOC Boundary Checks
-        if decision.recommended_action == EMSAction.BATTERY_DISCHARGE:
-            if state.battery_soc < self.MIN_SAFE_BATTERY_SOC:
-                violations.append(
-                    f"Battery discharge blocked: Current SOC {state.battery_soc:.1f}% is below minimum safe threshold of {self.MIN_SAFE_BATTERY_SOC:.1f}%."
-                )
-
-        if decision.recommended_action == EMSAction.BATTERY_CHARGE:
-            if state.battery_soc >= self.MAX_SAFE_BATTERY_SOC:
-                violations.append(
-                    f"Battery charge blocked: Battery is already at max capacity ({state.battery_soc:.1f}%)."
-                )
 
         # 3. System Load Safety Limits
         if state.load_consumption_kw > self.MAX_SYSTEM_LOAD_KW:

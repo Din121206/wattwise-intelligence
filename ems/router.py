@@ -64,6 +64,16 @@ class ExecuteResponse(BaseModel):
     hardware_response: Optional[HardwareResponse] = None
 
 
+@router.get("/health", summary="EMS Service Health Check")
+def ems_health():
+    """Returns operational health status for EMS module."""
+    return {
+        "status": "healthy",
+        "service": "EMS",
+        "simulation": True
+    }
+
+
 @router.get("/scenarios", summary="List pre-packaged demo energy scenarios")
 def get_scenarios():
     """Returns realistic pre-packaged energy states for testing the EMS decision flow."""
@@ -139,7 +149,6 @@ def execute_decision(request: ExecuteRequest):
         EnergyState(
             installation_id=decision.installation_id,
             solar_generation_kw=1.0,
-            battery_soc=50.0,
             grid_import_kw=0.5,
             load_consumption_kw=1.5
         )
