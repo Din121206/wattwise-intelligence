@@ -4,7 +4,7 @@ AI API service.
 
 Receives raw IoT telemetry from the WattWise backend,
 runs the intelligence engine, and returns the
-9-field intelligence contract.
+nested energy readings + intelligence output contract.
 """
 
 from fastapi import FastAPI, HTTPException
@@ -60,18 +60,13 @@ def analyze_intelligence(
             capacity=SOLAR_CAPACITY_KW
         )
 
-        intelligence = output.intelligence_output
-
         return {
-            "predicted_generation": intelligence.predicted_generation,
-            "expected_generation": intelligence.expected_generation,
-            "actual_generation": intelligence.actual_generation,
-            "performance_loss": intelligence.performance_loss,
-            "health_score": intelligence.health_score,
-            "status": intelligence.status,
-            "anomaly": intelligence.anomaly,
-            "likely_cause": intelligence.likely_cause,
-            "recommendation": intelligence.recommendation
+            "energy_readings": (
+                output.energy_readings.model_dump()
+            ),
+            "intelligence_output": (
+                output.intelligence_output.model_dump()
+            )
         }
 
     except Exception as exc:

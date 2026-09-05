@@ -26,6 +26,8 @@ from app.generation import GenerationAnalyzer
 
 class IntelligenceEngine:
 
+    EXCESS_GENERATION_THRESHOLD = 1.20
+
     def analyze(
         self,
         dataframe,
@@ -68,6 +70,24 @@ class IntelligenceEngine:
         result = recommender.generate(
             result,
             baseline_dataframe=baseline_dataframe
+        )
+
+        # Detect unexpectedly high generation.
+        excess_generation = (
+            result["expected_generation"] > 0
+        ) & (
+            result["actual_generation"]
+            > result["expected_generation"]
+            * self.EXCESS_GENERATION_THRESHOLD
+        )
+
+        result.loc[excess_generation, "anomaly"] = True
+        result.loc[excess_generation, "likely_cause"] = (
+            "Unexpectedly high solar generation"
+        )
+        result.loc[excess_generation, "recommendation"] = (
+            "Verify irradiance conditions, sensor readings, "
+            "and solar system measurements."
         )
 
         return result
@@ -141,6 +161,24 @@ class IntelligenceEngine:
 
         recommender = RecommendationEngine()
         result = recommender.generate(result)
+
+        # Detect unexpectedly high generation.
+        excess_generation = (
+            expected_generation > 0
+            and actual_generation
+            > expected_generation
+            * self.EXCESS_GENERATION_THRESHOLD
+        )
+
+        if excess_generation:
+            result["anomaly"] = True
+            result["likely_cause"] = (
+                "Unexpectedly high solar generation"
+            )
+            result["recommendation"] = (
+                "Verify irradiance conditions, sensor readings, "
+                "and solar system measurements."
+            )
 
         hardware_detector = HardwareAnomalyDetector()
 
