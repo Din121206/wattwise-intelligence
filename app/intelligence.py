@@ -11,6 +11,7 @@ from digital_twin.performance import PerformanceAnalyzer
 from anomaly.detector import AnomalyDetector
 from anomaly.cause_classifier import CauseClassifier
 from recommendations.engine import RecommendationEngine
+from recommendations.control_engine import ControlRecommendationEngine
 from app.health import HealthCalculator
 from app.models import IntelligenceOutput
 from app.output_models import (
@@ -42,6 +43,7 @@ class IntelligenceEngine:
     def __init__(self):
         self.ml_anomaly_classifier = MLAnomalyClassifier()
         self.ml_forecaster = MLSolarForecaster()
+        self.control_recommender = ControlRecommendationEngine()
 
     def analyze(
         self,
@@ -366,6 +368,26 @@ class IntelligenceEngine:
         inverter_status = hardware_detector.inverter_status(
             raw_data.inverter.status_code
         )
+
+        # ---------------------------------------------------------
+        # CONDITION-BASED EMS CONTROL RECOMMENDATION
+        # ---------------------------------------------------------
+        # Control recommendations are generated only when telemetry
+        # justifies the action. Maintenance/safety findings remain
+        # separate and are never converted into an EMS action.
+        if not hardware_anomalies:
+            control = self.control_recommender.recommend(
+                raw_data,
+                predicted_generation=predicted_generation,
+                scenario=result.iloc[0].get("ml_scenario"),
+                hardware_anomalies=hardware_anomalies,
+            )
+
+            if control["recommendation"] is not None:
+                result["recommendation"] = control["recommendation"]
+                result["control_action"] = control["control_action"]
+                result["control_confidence"] = control["confidence"]
+
 
         result["inverter_status"] = inverter_status
         result["installation_id"] = raw_data.installation_id
