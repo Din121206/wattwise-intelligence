@@ -32,6 +32,8 @@ class IntelligenceEngine:
     EXCESS_GENERATION_THRESHOLD = 1.20
     ML_CONFIDENCE_THRESHOLD = 0.75
 
+    NORMAL_RECOMMENDATION = "System operating normally."
+
     ML_CAUSE_MAP = {
         "panel_soiling": "Panel shaded or dirty",
         "partial_shading": "Panel shaded or dirty",
@@ -98,7 +100,6 @@ class IntelligenceEngine:
             baseline_dataframe=baseline_dataframe,
         )
 
-        # Detect unexpectedly high generation.
         excess_generation = (
             (result["expected_generation"] > 0)
             & (
@@ -141,7 +142,6 @@ class IntelligenceEngine:
         scenario = prediction["scenario"]
         confidence = prediction["confidence"]
 
-        # Only use a confident ML diagnosis for the main intelligence result.
         if (
             confidence >= self.ML_CONFIDENCE_THRESHOLD
             and scenario in self.ML_CAUSE_MAP
@@ -150,7 +150,6 @@ class IntelligenceEngine:
             result["likely_cause"] = self.ML_CAUSE_MAP[scenario]
 
             if scenario == "panel_soiling":
-                # Exact teammate maintenance recommendation.
                 result["recommendation"] = (
                     "Inspect and clean the solar panels."
                 )
@@ -209,23 +208,14 @@ class IntelligenceEngine:
 
         generation_analyzer = GenerationAnalyzer(capacity)
 
-        # Expected generation is the physics-based estimate for
-        # the current operating conditions.
         expected_generation = (
             generation_analyzer.expected_generation(raw_data)
         )
 
-        # Actual generation comes directly from the solar telemetry.
         actual_generation = energy["solar_generation"]
 
-        # ---------------------------------------------------------
-        # ML SOLAR FORECAST
-        # ---------------------------------------------------------
-        # The trained ML model predicts NEXT-HOUR solar generation
-        # from the current IoT operating conditions.
         predicted_generation = self.ml_forecaster.predict(raw_data)
 
-        # Keep the ML prediction within the physical panel capacity.
         predicted_generation = min(
             max(predicted_generation, 0.0),
             capacity,
@@ -272,15 +262,11 @@ class IntelligenceEngine:
         recommender = RecommendationEngine()
         result = recommender.generate(result)
 
-        # ---------------------------------------------------------
-        # ML ANOMALY CLASSIFICATION
-        # ---------------------------------------------------------
         result = self._apply_ml_anomaly_classification(
             result,
             raw_data,
         )
 
-        # Detect unexpectedly high generation.
         excess_generation = (
             expected_generation > 0
             and actual_generation
@@ -299,10 +285,6 @@ class IntelligenceEngine:
                 "and solar system measurements."
             )
 
-        # ---------------------------------------------------------
-        # HARDWARE SAFETY DETECTION
-        # ---------------------------------------------------------
-
         hardware_detector = HardwareAnomalyDetector()
 
         hardware_anomalies = hardware_detector.detect(
@@ -314,13 +296,6 @@ class IntelligenceEngine:
         result["hardware_anomalies"] = [
             hardware_anomalies
         ]
-
-        # ---------------------------------------------------------
-        # Merge hardware safety anomalies into the main status.
-        #
-        # Priority:
-        # critical > warning > existing performance status
-        # ---------------------------------------------------------
 
         if hardware_anomalies:
             result["anomaly"] = True
@@ -373,11 +348,29 @@ class IntelligenceEngine:
         # Control recommendations are generated only when telemetry
         # justifies the action. Maintenance/safety findings remain
         # separate and are never converted into an EMS action.
+        #
+        # ML scenario classification is trusted for control only when
+        # its confidence reaches the configured threshold.
         if not hardware_anomalies:
+
+            ml_scenario = result.iloc[0].get(
+                "ml_scenario"
+            )
+
+            ml_confidence = float(
+                result.iloc[0].get(
+                    "ml_confidence",
+                    0.0,
+                )
+            )
+
+            if ml_confidence < self.ML_CONFIDENCE_THRESHOLD:
+                ml_scenario = None
+
             control = self.control_recommender.recommend(
                 raw_data,
                 predicted_generation=predicted_generation,
-                scenario=result.iloc[0].get("ml_scenario"),
+                scenario=ml_scenario,
                 hardware_anomalies=hardware_anomalies,
             )
 
@@ -386,12 +379,25 @@ class IntelligenceEngine:
                 result["control_action"] = control["control_action"]
                 result["control_confidence"] = control["confidence"]
 
+                # MAINTAIN is an internal EMS state. The public
+                # intelligence contract uses an informational message
+                # for a normal operating system.
+                if (
+                    control["control_action"] == "MAINTAIN"
+                    and not bool(result.iloc[0]["anomaly"])
+                    and result.iloc[0]["status"] == "healthy"
+                ):
+                    result["recommendation"] = (
+                        self.NORMAL_RECOMMENDATION
+                    )
+
         result["inverter_status"] = inverter_status
         result["installation_id"] = raw_data.installation_id
 
         return result
 
     def build_final_output(self, dataframe) -> FinalOutput:
+
         if dataframe.empty:
             raise ValueError(
                 "Cannot create output from empty data."
@@ -473,6 +479,7 @@ class IntelligenceEngine:
         )
 
     def api_output(self, dataframe):
+
         if dataframe.empty:
             raise ValueError(
                 "Cannot create output from empty data."
@@ -517,6 +524,7 @@ class IntelligenceEngine:
         dataframe,
         installation_id: str,
     ):
+
         alert_generator = AlertGenerator()
 
         return alert_generator.generate(
@@ -529,6 +537,7 @@ class IntelligenceEngine:
         dataframe,
         installation_id: str,
     ):
+
         intelligence = self.api_output(dataframe)
 
         alerts = self.generate_alerts(
@@ -565,6 +574,7 @@ class IntelligenceEngine:
         installation_id: str,
         baseline_dataframe=None,
     ):
+
         result = self.analyze(
             dataframe,
             capacity=capacity,

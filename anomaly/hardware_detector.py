@@ -72,7 +72,7 @@ class HardwareAnomalyDetector:
                 "status": "active",
                 "likely_cause": "Panel shaded or dirty",
                 "recommendation":
-                    "Inspect the solar panels for shading or soiling."
+                    "Inspect and clean the solar panels."
             })
 
         if data.battery.voltage > self.BATTERY_OVERVOLTAGE:
