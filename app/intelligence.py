@@ -150,21 +150,19 @@ class IntelligenceEngine:
             result["likely_cause"] = self.ML_CAUSE_MAP[scenario]
 
             if scenario == "panel_soiling":
+                # Exact teammate maintenance recommendation.
                 result["recommendation"] = (
-                    "Inspect and clean the solar panels to remove "
-                    "possible dirt or soiling."
+                    "Inspect and clean the solar panels."
                 )
 
             elif scenario == "partial_shading":
                 result["recommendation"] = (
-                    "Inspect the panel area for shadows, obstructions, "
-                    "or nearby objects causing partial shading."
+                    "Inspect the installation for partial shading."
                 )
 
             elif scenario == "inverter_inefficiency":
                 result["recommendation"] = (
-                    "Inspect inverter efficiency, temperature, wiring, "
-                    "and operating condition."
+                    "Inspect the inverter and verify its electrical connections."
                 )
 
             elif scenario == "cloudy_weather":
@@ -387,7 +385,6 @@ class IntelligenceEngine:
                 result["recommendation"] = control["recommendation"]
                 result["control_action"] = control["control_action"]
                 result["control_confidence"] = control["confidence"]
-
 
         result["inverter_status"] = inverter_status
         result["installation_id"] = raw_data.installation_id
